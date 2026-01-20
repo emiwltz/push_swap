@@ -1,27 +1,35 @@
-NAME    = push_swap
+NAME        = push_swap
 
-SRCS    = \
-		  src/main.c \
+CC          = cc
+CFLAGS      = -Wall -Wextra -Werror
+INCLUDES    = -Iincludes -Ilibft/includes
 
-OBJS    = $(SRCS:.c=.o)
+SRCS        = \
+              src/main.c
 
-CC      = cc
+OBJS        = $(SRCS:.c=.o)
 
-CFLAGS  = -Wall -Wextra -Werror -I.
+LIBFT_DIR   = libft
+LIBFT       = $(LIBFT_DIR)/libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR)
 
-%.o: %.c push_swap.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) $(LIBFT) -o $(NAME)
+
+%.o: %.c includes/push_swap.h
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
+	$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
+	$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: fclean all
 
