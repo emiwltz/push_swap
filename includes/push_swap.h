@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/21 12:46:41 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/21 15:30:39 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 #include "libft.h"
 
+#define ERR_MSG "Error\n"
+#define FLAG_BENCH "--bench"
+#define FLAG_SIMPLE "--simple"
+#define FLAG_MEDIUM "--medium"
+#define FLAG_COMPLEX "--complex"
+#define FLAG_ADAPTIVE "--adaptive"
+
+#include <stdbool.h>
+#include <limits.h>
 
 typedef struct s_node{
   int	value;
@@ -23,17 +32,24 @@ typedef struct s_node{
 }t_node;
 
 typedef enum e_algo{
+  ALGO_UNSET,
   ALGO_SIMPLE,
   ALGO_MEDIUM,
   ALGO_COMPLEX,
-  ALGO_ADAPTATIVE,
+  ALGO_ADAPTIVE,
 }t_algo;
+
+typedef struct s_ctx{
+  bool bench_enabled;
+  t_algo algo;
+}t_ctx;
 
 typedef struct s_stack{
   t_node *head;
   t_node *tail;
-  int	size;
+  size_t	size;
 }t_stack;
 
-#endif
+void	error_msg(void);
 
+#endif
