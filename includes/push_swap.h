@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/21 15:30:39 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/22 12:42:14 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ typedef enum e_algo{
 typedef struct s_ctx{
   bool bench_enabled;
   t_algo algo;
+  int flag_count;
+  int bench_count;
 }t_ctx;
 
 typedef struct s_stack{
@@ -51,5 +53,6 @@ typedef struct s_stack{
 }t_stack;
 
 void	error_msg(void);
+int	ft_strcmp(const char *str1, const char *str2);
 
 #endif
