@@ -1,11 +1,12 @@
 NAME        = push_swap
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -g
 INCLUDES    = -Iincludes -Ilibft/includes
 
 SRCS        = \
-              src/main.c
+              src/main.c\
+			  src/utils/ft_strcmp.c
 
 OBJS        = $(SRCS:.c=.o)
 

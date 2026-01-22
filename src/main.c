@@ -6,10 +6,11 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/22 15:17:11 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/22 16:32:36 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "push_swap.h"
 
 void	ctx_init(t_ctx *ctx)
@@ -67,6 +68,42 @@ char	**check_argv(char *str, t_ctx *ctx)
   return (0);
 }
 
+int	is_digit_string(char *s)
+{
+  int	i;
+
+  i = 0;
+  while (s[i])
+  {
+	if(ft_isdigit((int)s[i]))
+	  return (1);
+	i++;
+  }
+  return (0);
+}
+
+char	*clean_flags(char **argv, int argc, t_ctx *ctx)
+{
+  char	*payload;
+  int	i;
+
+  payload = "";
+  (void) ctx;
+  i =0;
+  while (i < argc)
+  {
+	if (is_digit_string(argv[i]))
+	{
+	  payload = ft_strjoin(payload, argv[i]);
+	  payload = ft_strjoin(payload, " ");
+	}
+	i++;
+  }
+  ft_printf("%s", payload);
+  return (payload);
+}
+
+
 int	main(int argc, char** argv)
 {
   int	i;
@@ -75,9 +112,10 @@ int	main(int argc, char** argv)
   i = 1;
   ctx = malloc(sizeof(t_ctx));
   ctx_init(ctx);
-  while(argc > i)
+  while(i < argc)
   {
 	check_argv(argv[i], ctx);
 	i++;
   }
+  clean_flags(argv, argc, ctx);
 }
