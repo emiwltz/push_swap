@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/22 16:32:36 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/22 16:38:32 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,19 +103,24 @@ char	*clean_flags(char **argv, int argc, t_ctx *ctx)
   return (payload);
 }
 
+void	parsing(char **argv, int argc, t_ctx ctx)
+{
+  int	i;
+
+  i = 1;
+  while(i < argc)
+  {
+	check_argv(argv[i], &ctx);
+	i++;
+  }
+  clean_flags(argv, argc, &ctx);
+}
 
 int	main(int argc, char** argv)
 {
-  int	i;
   t_ctx	*ctx;
 
-  i = 1;
   ctx = malloc(sizeof(t_ctx));
   ctx_init(ctx);
-  while(i < argc)
-  {
-	check_argv(argv[i], ctx);
-	i++;
-  }
-  clean_flags(argv, argc, ctx);
+  parsing(argv, argc, *ctx);
 }
