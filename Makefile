@@ -6,7 +6,10 @@ INCLUDES    = -Iincludes -Ilibft/includes
 
 SRCS        = \
               src/main.c\
-			  src/utils/ft_strcmp.c
+			  src/utils/ft_strcmp.c\
+			  src/parse/parsing.c\
+			  src/parse/set_and_check.c\
+			  src/utils/check_string.c\
 
 OBJS        = $(SRCS:.c=.o)
 

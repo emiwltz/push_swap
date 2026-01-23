@@ -54,6 +54,9 @@ typedef struct s_stack{
 
 void	error_msg(void);
 int	ft_strcmp(const char *str1, const char *str2);
-int	ft_isnotdigit(int c);
+int	is_digit_string(char *s);
 int	is_not_digit_string(char *s);
+void	parsing(char **argv, int argc, t_ctx ctx);
+char	**set_flags(char *str, t_ctx *ctx);
+int	is_mixed(char *s);
 #endif
