@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:29:01 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/23 16:29:32 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/24 16:21:23 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	is_digit_string(char *s)
   while (s[i])
   {
 	if(ft_isdigit(s[i]) == 0)
-	  return (1);
+	  return (0);
 	i++;
   }
-  return (0);
+  return (1);
 }
 
 int	is_not_digit_string(char *s)
