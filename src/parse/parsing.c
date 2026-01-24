@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/23 16:26:06 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/24 14:04:37 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*clean_flags(char **argv, int argc, t_ctx *ctx)
 	}
 	i++;
   }
-  ft_printf("%s", payload);
+  ft_printf("%s\n", payload);
   return (payload);
 }
 
@@ -42,7 +42,7 @@ void	parsing(char **argv, int argc, t_ctx ctx)
   while(i < argc)
   {
 	set_flags(argv[i], &ctx);
-	is_mixed(argv[i]);
+	arg_is_valid(argv[i]);
 	i++;
   }
   clean_flags(argv, argc, &ctx);

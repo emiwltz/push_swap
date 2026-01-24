@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/23 14:49:52 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/24 14:05:17 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ int	is_digit_string(char *s);
 int	is_not_digit_string(char *s);
 void	parsing(char **argv, int argc, t_ctx ctx);
 char	**set_flags(char *str, t_ctx *ctx);
-int	is_mixed(char *s);
+int	arg_is_valid(char *s);
 #endif
