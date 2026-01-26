@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/26 13:14:47 by ewaltz           ###   ########.fr       */
+/*   Created: 2026/01/26 11:09:32 by ewaltz            #+#    #+#             */
+/*   Updated: 2026/01/26 11:10:52 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-void	ctx_init(t_ctx *ctx)
+void	print_error(void)
 {
-	ctx->algo = ALGO_UNSET;
-	ctx->bench_enabled = 0;
-	ctx->flag_count = 0;
-	ctx->bench_count = 0;
-}
-
-
-int	main(int argc, char** argv)
-{
-  t_ctx	*ctx;
-
-  ctx = malloc(sizeof(t_ctx));
-  ctx_init(ctx);
-  if(parsing(argv, argc, *ctx) == 1)
-  {
-	print_error();
-	return (1);
-  }
-  return (0);
+  write(2, "Error", 6);
 }

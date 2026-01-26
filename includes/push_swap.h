@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/24 14:05:17 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/26 15:18:24 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ typedef struct s_stack{
 void	error_msg(void);
 int	ft_strcmp(const char *str1, const char *str2);
 int	is_digit_string(char *s);
-int	is_not_digit_string(char *s);
-void	parsing(char **argv, int argc, t_ctx ctx);
+int	parsing(char **argv, int argc, t_ctx ctx);
 char	**set_flags(char *str, t_ctx *ctx);
 int	arg_is_valid(char *s);
+void	print_error(void);
 #endif

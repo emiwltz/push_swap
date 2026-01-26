@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/24 16:37:04 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/26 13:34:09 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,12 @@ char	**set_flags(char *str, t_ctx *ctx)
 
   i = 0;
   if (str[i] == '-' && str[i + 1] == '-')
-  {
 	set_algo(str, ctx);
-	return (0);
-  }
   if (ft_strcmp((const char *) str, "--bench") == 0)
   {
 	ctx->bench_enabled = true;
 	ctx->bench_count += 1;
   }
-	// return(ft_split((const char *)str, ' '));
   return (0);
 }
 
@@ -68,6 +64,7 @@ bool	is_a_flag(char *s)
 int	arg_is_valid(char *s)
 {
   if (is_digit_string(s) == 1 || is_a_flag(s) == true)
-	return (1);
-  return (0);
+	return (0);
+  print_error();
+  return (1);
 }

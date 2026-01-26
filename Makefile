@@ -10,6 +10,7 @@ SRCS        = \
 			  src/parse/parsing.c\
 			  src/parse/set_and_check.c\
 			  src/utils/check_string.c\
+			  src/utils/print_error.c\
 
 OBJS        = $(SRCS:.c=.o)
 
