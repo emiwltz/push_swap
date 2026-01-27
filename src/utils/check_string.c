@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:29:01 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/27 12:33:21 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/27 15:38:19 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,13 @@ int	is_valid_digit(char *s)
   int	i;
 
   i = 0;
+
+  if (s[i] == '-' && ft_isdigit(s[i + 1]) == 0)
+	return (0);
+  if (s[i] == '-')
+	i++;
   while (s[i])
   {
-	if (s[i] == '-')
-	  i++;
 	if(ft_isdigit(s[i]) == 0)
 	  return (0);
 	i++;

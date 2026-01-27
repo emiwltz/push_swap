@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/27 11:58:06 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/27 15:44:06 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	second_check(char **argv, int argc)
   int_table = clean_flags(argv, argc);
   while (int_table[i] != NULL)
   {
-	if (is_valid_digit(int_table[i]) == 1)
+	if (is_valid_digit(int_table[i]) == 0)
 	  return (1);
 	i++;
   }
@@ -57,19 +57,15 @@ int	first_check(char **argv, int argc, t_ctx ctx)
   while(i < argc)
   {
 	set_flags(argv[i], &ctx);
+	if (argv[i][0] == '\0')
+	  return (1);
 	if (arg_is_valid(argv[i]) == 1)
 	  return (1);
 	i++;
   }
   if (ctx.flag_count > 1 || ctx.bench_count > 1)
-  {
-	print_error();
 	return (1);
-	}
-  if (second_check(argv, argc) == 0)
-  {
-	print_error();
+  if (second_check(argv, argc) == 1)
 	return (1);
-  }
   return (0);
 }
