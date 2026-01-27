@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:29:01 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/26 15:18:26 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/27 12:33:21 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,23 @@ int	is_digit_string(char *s)
   i = 0;
   while (s[i])
   {
-	if(ft_isdigit(s[i]) == 0 && s[i] != '-')
+	if(ft_isdigit(s[i]) == 0 && s[i] != '-' && s[i] != ' ')
+	  return (0);
+	i++;
+  }
+  return (1);
+}
+
+int	is_valid_digit(char *s)
+{
+  int	i;
+
+  i = 0;
+  while (s[i])
+  {
+	if (s[i] == '-')
+	  i++;
+	if(ft_isdigit(s[i]) == 0)
 	  return (0);
 	i++;
   }

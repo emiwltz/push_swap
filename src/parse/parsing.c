@@ -6,20 +6,19 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/26 13:40:28 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/27 11:58:06 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
-char	**clean_flags(char **argv, int argc, t_ctx *ctx)
+char	**clean_flags(char **argv, int argc)
 {
   char	*payload;
   int	i;
 
   payload = "";
-  (void) ctx;
   i = 1;
   while (i < argc)
   {
@@ -34,8 +33,23 @@ char	**clean_flags(char **argv, int argc, t_ctx *ctx)
   return (ft_split(payload, ' '));
 }
 
+int	second_check(char **argv, int argc)
+{
+  int	i;
+  char **int_table;
 
-int	parsing(char **argv, int argc, t_ctx ctx)
+  i = 0;
+  int_table = clean_flags(argv, argc);
+  while (int_table[i] != NULL)
+  {
+	if (is_valid_digit(int_table[i]) == 1)
+	  return (1);
+	i++;
+  }
+  return (0);
+}
+
+int	first_check(char **argv, int argc, t_ctx ctx)
 {
   int	i;
 
@@ -52,6 +66,10 @@ int	parsing(char **argv, int argc, t_ctx ctx)
 	print_error();
 	return (1);
 	}
-  clean_flags(argv, argc, &ctx);
+  if (second_check(argv, argc) == 0)
+  {
+	print_error();
+	return (1);
+  }
   return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/26 13:14:47 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/27 11:16:46 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char** argv)
 
   ctx = malloc(sizeof(t_ctx));
   ctx_init(ctx);
-  if(parsing(argv, argc, *ctx) == 1)
+  if(first_check(argv, argc, *ctx) == 1)
   {
 	print_error();
 	return (1);
