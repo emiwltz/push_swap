@@ -1,55 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_and_check.c                                    :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/26 13:34:09 by ewaltz           ###   ########.fr       */
+/*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
+/*   Updated: 2026/01/27 15:44:06 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	set_algo(char* flag, t_ctx *ctx)
+char	**clean_flags(char **argv, int argc)
 {
-  if (ft_strcmp(FLAG_SIMPLE, flag) == 0)
-  {
-	ctx->algo = ALGO_SIMPLE;
-	ctx->flag_count += 1;
-  }
-  else if (ft_strcmp(FLAG_MEDIUM, flag) == 0)
-  {
-	ctx->algo = ALGO_MEDIUM;
-	ctx->flag_count += 1;
-  }
-  else if (ft_strcmp(FLAG_COMPLEX, flag) == 0)
-  {
-	ctx->algo = ALGO_COMPLEX;
-	ctx->flag_count += 1;
-  }
-  else if (ft_strcmp(FLAG_ADAPTIVE, flag) == 0)
-  {
-	ctx->algo = ALGO_ADAPTIVE;
-	ctx->flag_count += 1;
-  }
-}
-
-
-char	**set_flags(char *str, t_ctx *ctx)
-{
+  char	*payload;
   int	i;
 
-  i = 0;
-  if (str[i] == '-' && str[i + 1] == '-')
-	set_algo(str, ctx);
-  if (ft_strcmp((const char *) str, "--bench") == 0)
+  payload = "";
+  i = 1;
+  while (i < argc)
   {
-	ctx->bench_enabled = true;
-	ctx->bench_count += 1;
+	if (is_digit_string(argv[i]) == 1)
+	{
+	  payload = ft_strjoin(payload, argv[i]);
+	  payload = ft_strjoin(payload, " ");
+	}
+	i++;
   }
-  return (0);
+  ft_printf("%s\n", payload);
+  return (ft_split(payload, ' '));
 }
 
 bool	is_a_flag(char *s)
