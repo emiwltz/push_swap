@@ -7,8 +7,8 @@ INCLUDES    = -Iincludes -Ilibft/includes
 SRCS        = \
               src/main.c\
 			  src/utils/ft_strcmp.c\
-			  src/parse/parsing.c\
-			  src/parse/set_and_check.c\
+			  src/parse/check_args.c\
+			  src/parse/set_flags.c\
 			  src/utils/check_string.c\
 			  src/utils/print_error.c\
 
