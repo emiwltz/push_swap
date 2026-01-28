@@ -1,72 +1,103 @@
-NAME = libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/10 14:11:35 by alemyre           #+#    #+#              #
+#    Updated: 2025/11/24 13:55:03 by alemyre          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRC = \
-	src/ft_atoi.c \
-	src/ft_bzero.c \
-	src/ft_calloc.c \
-	src/ft_isalnum.c \
-	src/ft_isalpha.c \
-	src/ft_isascii.c \
-	src/ft_isdigit.c \
-	src/ft_isprint.c \
-	src/ft_itoa.c \
-	src/ft_memchr.c \
-	src/ft_memcmp.c \
-	src/ft_memcpy.c \
-	src/ft_memmove.c \
-	src/ft_memset.c \
-	src/ft_putchar_fd.c \
-	src/ft_putendl_fd.c \
-	src/ft_putnbr_fd.c \
-	src/ft_putstr_fd.c \
-	src/ft_split.c \
-	src/ft_strdup.c \
-	src/ft_strchr.c \
-	src/ft_striteri.c \
-	src/ft_strjoin.c \
-	src/ft_strlcat.c \
-	src/ft_strlcpy.c \
-	src/ft_strlen.c \
-	src/ft_strmapi.c \
-	src/ft_strncmp.c \
-	src/ft_strnstr.c \
-	src/ft_strrchr.c \
-	src/ft_strtrim.c \
-	src/ft_substr.c \
-	src/ft_tolower.c \
-	src/ft_toupper.c \
-	get_next_line/get_next_line.c \
-	get_next_line/get_next_line_utils.c \
-	ft_printf/ft_printf.c \
-	ft_printf/ft_printf_char.c \
-	ft_printf/ft_printf_hexa_low.c \
-	ft_printf/ft_printf_hexa_up.c \
-	ft_printf/ft_printf_int.c \
-	ft_printf/ft_printf_ptr.c \
-	ft_printf/ft_printf_string.c \
-	ft_printf/ft_printf_unsigned.c
+NAME=	libft.a
 
+CC=		cc
+CFLAGS=	-Wall -Wextra -Werror -MMD -MP
+AR=		ar rcs
 
-CC = cc
+SRCS=	ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 
-CFLAGS = -Wall -Werror -Wextra
+OBJS=	$(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
+DEPS=	$(OBJS:.o=.d)
 
-OBJ = $(SRC:.c=.o)
+SRCS_B=	ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
+
+OBJS_B=	$(addprefix $(BUILD_DIR), $(SRCS_B:.c=.o))
+DEPS_B= $(OBJS_B:.o=.d)
+
+BUILD_DIR = .build/
+
+BONUS_N=.bonus
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $@ $^
+$(NAME): $(OBJS) 
+	$(AR) $(NAME) $(OBJS)
 
-%.o: %.c includes/libft.h
-	$(CC) $(CFLAGS) -I includes -c $< -o $@
+bonus: $(BONUS_N)
+
+$(BONUS_N): $(OBJS) $(OBJS_B)
+	$(AR) $(NAME) $(OBJS_B)
+	touch $(BONUS_N)
+
+-include $(DEPS) $(DEPS_B)
+
+$(BUILD_DIR)%.o: %.c
+	mkdir -p $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS) $(OBJS_B) $(DEPS) $(DEPS_B)
+	rm -f $(BONUS_N)
+	rm -fd $(BUILD_DIR)
 
-fclean:	clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+re_bonus: re bonus
+
+.PHONY: all clean fclean re bonus re_bonus
