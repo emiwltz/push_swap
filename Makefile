@@ -1,7 +1,7 @@
 NAME        = push_swap
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -g
+CFLAGS      = -Wall -Wextra -Werror -g3
 INCLUDES    = -Iincludes -Ilibft/includes
 
 SRCS        = \

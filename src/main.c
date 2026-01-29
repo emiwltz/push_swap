@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/27 11:16:46 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/29 12:10:50 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ int	main(int argc, char** argv)
   ctx_init(ctx);
   if(first_check(argv, argc, *ctx) == 1)
   {
+	free(ctx);
 	print_error();
 	return (1);
   }
+  free(ctx);
   return (0);
 }
