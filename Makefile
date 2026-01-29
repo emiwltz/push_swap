@@ -11,6 +11,8 @@ SRCS        = \
 			  src/parse/set_flags.c\
 			  src/utils/check_string.c\
 			  src/utils/print_error.c\
+			  src/utils/count_payload.c \
+			  src/parse/check_double.c \
 
 OBJS        = $(SRCS:.c=.o)
 
