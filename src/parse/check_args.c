@@ -6,11 +6,12 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/29 09:56:40 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/29 11:56:21 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <limits.h>
 
 char	**clean_flags(char **argv, int argc)
 {
@@ -43,7 +44,7 @@ bool	is_a_flag(char *s)
 
 int	arg_is_valid(char *s)
 {
-  if (is_digit_string(s) == 1 || is_a_flag(s) == true)
+  if ((is_digit_string(s) == 1 || is_a_flag(s) == true) && ( ft_atol(s) < INT_MAX && ft_atol(s) > INT_MIN))
 	return (0);
   return (1);
 }

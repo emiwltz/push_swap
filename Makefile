@@ -13,6 +13,7 @@ SRCS        = \
 			  src/utils/print_error.c\
 			  src/utils/count_payload.c \
 			  src/parse/check_double.c \
+			  src/utils/ft_atol.c \
 
 OBJS        = $(SRCS:.c=.o)
 

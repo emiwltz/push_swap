@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/29 11:14:13 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/29 11:47:29 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,5 @@ int	is_valid_digit(char *s);
 char	**clean_flags(char **argv, int argc);
 int	count_payload(char **payload);
 int	*third_check(char **payload);
+long	ft_atol(const char *str);
 #endif
