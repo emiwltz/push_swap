@@ -64,4 +64,6 @@ char	**clean_flags(char **argv, int argc);
 int	count_payload(char **payload);
 int	*third_check(char **payload);
 long	ft_atol(const char *str);
+int only_spaces(char *s);
+bool  is_a_flag(char *s);
 #endif

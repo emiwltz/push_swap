@@ -14,6 +14,7 @@ SRCS        = \
 			  src/utils/count_payload.c \
 			  src/parse/check_double.c \
 			  src/utils/ft_atol.c \
+				src/utils/only_spaces.c \
 
 OBJS        = $(SRCS:.c=.o)
 

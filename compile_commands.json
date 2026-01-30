@@ -1,11 +1,12 @@
 [
  {
-  "directory": "/home/ewaltz/projects/42/push_swap",
+  "directory": "/Users/emi/Documents/code/42/push_swap",
   "arguments": [
    "cc",
    "-Wall",
    "-Wextra",
    "-Werror",
+   "-g3",
    "-Iincludes",
    "-Ilibft/includes",
    "-c",
@@ -16,7 +17,143 @@
   "file": "src/main.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/utils/ft_strcmp.c",
+   "-o",
+   "src/utils/ft_strcmp.o"
+  ],
+  "file": "src/utils/ft_strcmp.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/parse/check_args.c",
+   "-o",
+   "src/parse/check_args.o"
+  ],
+  "file": "src/parse/check_args.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/parse/set_flags.c",
+   "-o",
+   "src/parse/set_flags.o"
+  ],
+  "file": "src/parse/set_flags.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/utils/check_string.c",
+   "-o",
+   "src/utils/check_string.o"
+  ],
+  "file": "src/utils/check_string.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/utils/print_error.c",
+   "-o",
+   "src/utils/print_error.o"
+  ],
+  "file": "src/utils/print_error.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/utils/count_payload.c",
+   "-o",
+   "src/utils/count_payload.o"
+  ],
+  "file": "src/utils/count_payload.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/parse/check_double.c",
+   "-o",
+   "src/parse/check_double.o"
+  ],
+  "file": "src/parse/check_double.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-Iincludes",
+   "-Ilibft/includes",
+   "-c",
+   "src/utils/ft_atol.c",
+   "-o",
+   "src/utils/ft_atol.o"
+  ],
+  "file": "src/utils/ft_atol.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -32,7 +169,7 @@
   "file": "src/ft_atoi.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -48,7 +185,7 @@
   "file": "src/ft_bzero.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -64,7 +201,7 @@
   "file": "src/ft_calloc.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -80,7 +217,7 @@
   "file": "src/ft_isalnum.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -96,7 +233,7 @@
   "file": "src/ft_isalpha.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -112,7 +249,7 @@
   "file": "src/ft_isascii.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -128,7 +265,7 @@
   "file": "src/ft_isdigit.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -144,7 +281,7 @@
   "file": "src/ft_isprint.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -160,7 +297,7 @@
   "file": "src/ft_itoa.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -176,7 +313,7 @@
   "file": "src/ft_memchr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -192,7 +329,7 @@
   "file": "src/ft_memcmp.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -208,7 +345,7 @@
   "file": "src/ft_memcpy.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -224,7 +361,7 @@
   "file": "src/ft_memmove.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -240,7 +377,7 @@
   "file": "src/ft_memset.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -256,7 +393,7 @@
   "file": "src/ft_putchar_fd.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -272,7 +409,7 @@
   "file": "src/ft_putendl_fd.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -288,7 +425,7 @@
   "file": "src/ft_putnbr_fd.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -304,7 +441,7 @@
   "file": "src/ft_putstr_fd.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -320,7 +457,7 @@
   "file": "src/ft_split.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -336,7 +473,7 @@
   "file": "src/ft_strdup.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -352,7 +489,7 @@
   "file": "src/ft_strchr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -368,7 +505,7 @@
   "file": "src/ft_striteri.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -384,7 +521,7 @@
   "file": "src/ft_strjoin.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -400,7 +537,7 @@
   "file": "src/ft_strlcat.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -416,7 +553,7 @@
   "file": "src/ft_strlcpy.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -432,7 +569,7 @@
   "file": "src/ft_strlen.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -448,7 +585,7 @@
   "file": "src/ft_strmapi.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -464,7 +601,7 @@
   "file": "src/ft_strncmp.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -480,7 +617,7 @@
   "file": "src/ft_strnstr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -496,7 +633,7 @@
   "file": "src/ft_strrchr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -512,7 +649,7 @@
   "file": "src/ft_strtrim.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -528,7 +665,7 @@
   "file": "src/ft_substr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -544,7 +681,7 @@
   "file": "src/ft_tolower.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -560,7 +697,135 @@
   "file": "src/ft_toupper.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstadd_back_bonus.c",
+   "-o",
+   "src/ft_lstadd_back_bonus.o"
+  ],
+  "file": "src/ft_lstadd_back_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstadd_front_bonus.c",
+   "-o",
+   "src/ft_lstadd_front_bonus.o"
+  ],
+  "file": "src/ft_lstadd_front_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstclear_bonus.c",
+   "-o",
+   "src/ft_lstclear_bonus.o"
+  ],
+  "file": "src/ft_lstclear_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstdelone_bonus.c",
+   "-o",
+   "src/ft_lstdelone_bonus.o"
+  ],
+  "file": "src/ft_lstdelone_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstiter_bonus.c",
+   "-o",
+   "src/ft_lstiter_bonus.o"
+  ],
+  "file": "src/ft_lstiter_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstmap_bonus.c",
+   "-o",
+   "src/ft_lstmap_bonus.o"
+  ],
+  "file": "src/ft_lstmap_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstnew_bonus.c",
+   "-o",
+   "src/ft_lstnew_bonus.o"
+  ],
+  "file": "src/ft_lstnew_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Werror",
+   "-Wextra",
+   "-I",
+   "includes",
+   "-c",
+   "src/ft_lstsize_bonus.c",
+   "-o",
+   "src/ft_lstsize_bonus.o"
+  ],
+  "file": "src/ft_lstsize_bonus.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -576,7 +841,7 @@
   "file": "get_next_line/get_next_line.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -592,7 +857,7 @@
   "file": "get_next_line/get_next_line_utils.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -608,7 +873,7 @@
   "file": "ft_printf/ft_printf.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -624,7 +889,7 @@
   "file": "ft_printf/ft_printf_char.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -640,7 +905,7 @@
   "file": "ft_printf/ft_printf_hexa_low.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -656,7 +921,7 @@
   "file": "ft_printf/ft_printf_hexa_up.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -672,7 +937,7 @@
   "file": "ft_printf/ft_printf_int.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -688,7 +953,7 @@
   "file": "ft_printf/ft_printf_ptr.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",
@@ -704,7 +969,7 @@
   "file": "ft_printf/ft_printf_string.c"
  },
  {
-  "directory": "/home/ewaltz/projects/42/push_swap/libft",
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
   "arguments": [
    "cc",
    "-Wall",

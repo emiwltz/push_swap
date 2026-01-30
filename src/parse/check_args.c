@@ -38,13 +38,13 @@ bool	is_a_flag(char *s)
   if (ft_strcmp(s, FLAG_BENCH) == 0 || ft_strcmp(s, FLAG_SIMPLE) == 0
 	|| ft_strcmp(s, FLAG_MEDIUM) == 0 || ft_strcmp(s, FLAG_COMPLEX) == 0
 	|| ft_strcmp(s, FLAG_ADAPTIVE) == 0)
-	return (true);
+    return (true);
   return (false);
 }
 
 int	arg_is_valid(char *s)
 {
-  if ((is_digit_string(s) == 1 || is_a_flag(s) == true) && ( ft_atol(s) < INT_MAX && ft_atol(s) > INT_MIN))
-	return (0);
+  if ((is_digit_string(s) == 1 || is_a_flag(s) == true) && only_spaces(s) == 0 && ( ft_atol(s) < INT_MAX && ft_atol(s) > INT_MIN))
+    return (0);
   return (1);
 }
