@@ -1,0 +1,488 @@
+[
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_isdigit.c",
+   "-o",
+   "ft_isdigit.o"
+  ],
+  "file": "ft_isdigit.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_strlen.c",
+   "-o",
+   "ft_strlen.o"
+  ],
+  "file": "ft_strlen.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_strcmp.c",
+   "-o",
+   "ft_strcmp.o"
+  ],
+  "file": "ft_strcmp.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_strchr.c",
+   "-o",
+   "ft_strchr.o"
+  ],
+  "file": "ft_strchr.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_strdup.c",
+   "-o",
+   "ft_strdup.o"
+  ],
+  "file": "ft_strdup.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_mem.c",
+   "-o",
+   "ft_mem.o"
+  ],
+  "file": "ft_mem.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_atoi.c",
+   "-o",
+   "ft_atoi.o"
+  ],
+  "file": "ft_atoi.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_itoa.c",
+   "-o",
+   "ft_itoa.o"
+  ],
+  "file": "ft_itoa.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_split.c",
+   "-o",
+   "ft_split.o"
+  ],
+  "file": "ft_split.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_put.c",
+   "-o",
+   "ft_put.o"
+  ],
+  "file": "ft_put.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_lst.c",
+   "-o",
+   "ft_lst.o"
+  ],
+  "file": "ft_lst.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_lst2.c",
+   "-o",
+   "ft_lst2.o"
+  ],
+  "file": "ft_lst2.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap/libft",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-c",
+   "ft_substr.c",
+   "-o",
+   "ft_substr.o"
+  ],
+  "file": "ft_substr.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/main.c",
+   "-o",
+   "obj/main.o"
+  ],
+  "file": "src/main.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/stack.c",
+   "-o",
+   "obj/stack.o"
+  ],
+  "file": "src/stack.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/stack_utils.c",
+   "-o",
+   "obj/stack_utils.o"
+  ],
+  "file": "src/stack_utils.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/ops_swap.c",
+   "-o",
+   "obj/ops_swap.o"
+  ],
+  "file": "src/ops_swap.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/ops_push.c",
+   "-o",
+   "obj/ops_push.o"
+  ],
+  "file": "src/ops_push.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/ops_rotate.c",
+   "-o",
+   "obj/ops_rotate.o"
+  ],
+  "file": "src/ops_rotate.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/ops_reverse_rotate.c",
+   "-o",
+   "obj/ops_reverse_rotate.o"
+  ],
+  "file": "src/ops_reverse_rotate.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/parsing.c",
+   "-o",
+   "obj/parsing.o"
+  ],
+  "file": "src/parsing.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/parsing_args.c",
+   "-o",
+   "obj/parsing_args.o"
+  ],
+  "file": "src/parsing_args.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/utils.c",
+   "-o",
+   "obj/utils.o"
+  ],
+  "file": "src/utils.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/utils2.c",
+   "-o",
+   "obj/utils2.o"
+  ],
+  "file": "src/utils2.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/disorder.c",
+   "-o",
+   "obj/disorder.o"
+  ],
+  "file": "src/disorder.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/sort_small.c",
+   "-o",
+   "obj/sort_small.o"
+  ],
+  "file": "src/sort_small.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/sort_simple.c",
+   "-o",
+   "obj/sort_simple.o"
+  ],
+  "file": "src/sort_simple.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/sort_medium.c",
+   "-o",
+   "obj/sort_medium.o"
+  ],
+  "file": "src/sort_medium.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/sort_complex.c",
+   "-o",
+   "obj/sort_complex.o"
+  ],
+  "file": "src/sort_complex.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/sort_adaptive.c",
+   "-o",
+   "obj/sort_adaptive.o"
+  ],
+  "file": "src/sort_adaptive.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/data.c",
+   "-o",
+   "obj/data.o"
+  ],
+  "file": "src/data.c"
+ },
+ {
+  "directory": "/Users/emi/Documents/code/42/push_swap",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-Iincludes",
+   "-Ilibft",
+   "-c",
+   "src/benchmark.c",
+   "-o",
+   "obj/benchmark.o"
+  ],
+  "file": "src/benchmark.c"
+ }
+]
