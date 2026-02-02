@@ -6,11 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 19:21:42 by alemyre           #+#    #+#             */
-/*   Updated: 2025/11/24 13:38:41 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/02 15:31:43 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

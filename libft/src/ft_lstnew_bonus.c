@@ -6,11 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:52:29 by alemyre           #+#    #+#             */
-/*   Updated: 2025/11/24 13:38:46 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/02 15:31:54 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 #include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)

@@ -1,0 +1,8 @@
+.cache/
+libft/.cache/
+.build/
+libft/.build/
+push_swap
+libft.a
+compile_commands.json
+CLAUDE.md

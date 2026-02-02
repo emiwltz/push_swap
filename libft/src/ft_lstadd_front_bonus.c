@@ -6,11 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:00:53 by alemyre           #+#    #+#             */
-/*   Updated: 2025/11/24 13:38:30 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/02 15:31:34 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

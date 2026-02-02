@@ -1,45 +1,54 @@
 NAME        = push_swap
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -g3
-INCLUDES    = -Iincludes -Ilibft/includes
+CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3
+AR			= ar rcs
 
 SRCS        = \
-              src/main.c\
-			  src/utils/ft_strcmp.c\
-			  src/parse/check_args.c\
-			  src/parse/set_flags.c\
-			  src/utils/check_string.c\
-			  src/utils/print_error.c\
-			  src/utils/count_payload.c \
-			  src/parse/check_double.c \
-			  src/utils/ft_atol.c \
-				src/utils/only_spaces.c \
+              main.c\
+			  ft_strcmp.c\
+			  check_args.c\
+			  set_flags.c\
+			  check_string.c\
+			  print_error.c\
+			  count_payload.c \
+			  check_double.c \
+			  ft_atol.c \
+				only_spaces.c \
 
-OBJS        = $(SRCS:.c=.o)
+OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
+DEPS		= $(OBJS:.o=.d)
 
-LIBFT_DIR   = libft
-LIBFT       = $(LIBFT_DIR)/libft.a
+BUILD_DIR 	= .build/
+
+LIBFT		= libft
+LIBFT_DIR   = libft/
+LIBFT_NAME  = libft.a
 
 all: $(NAME)
 
-$(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
+$(NAME): $(OBJS)
+	make -C $(LIBFT)
+	cp $(addprefix $(LIBFT_DIR), $(LIBFT_NAME)) .
+	mv $(LIBFT_NAME) $(NAME)
+	$(AR) $(NAME) $(OBJS)
 
-$(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) $(LIBFT) -o $(NAME)
 
-%.o: %.c includes/push_swap.h
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(BUILD_DIR)%.o: %.c
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
-	$(MAKE) -C $(LIBFT_DIR) clean
+	make -C $(LIBFT)/ clean
+	rm -f $(OBJS) $(DEPS)
+	rm -fd $(BUILD_DIR)
 
 fclean: clean
+	make -C $(LIBFT)/ fclean
 	rm -f $(NAME)
-	$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: fclean all
 
 .PHONY: all clean fclean re
+
+-include $(DEPS)

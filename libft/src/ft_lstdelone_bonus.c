@@ -6,11 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:09:04 by alemyre           #+#    #+#             */
-/*   Updated: 2025/11/24 13:38:35 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/02 15:31:39 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 #include <stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))

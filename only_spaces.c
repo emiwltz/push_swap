@@ -1,6 +1,6 @@
 
 
-#include "libft.h"
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 int only_spaces(char *s)

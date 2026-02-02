@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:29:01 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/27 15:38:19 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:38:26 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 
