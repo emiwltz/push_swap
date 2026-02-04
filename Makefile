@@ -2,7 +2,6 @@ NAME        = push_swap
 
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3
-AR			= ar rcs
 
 SRCS        = \
               main.c\
@@ -14,7 +13,7 @@ SRCS        = \
 			  count_payload.c \
 			  check_double.c \
 			  ft_atol.c \
-				only_spaces.c \
+			  only_spaces.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)
@@ -29,10 +28,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	make -C $(LIBFT)
-	cp $(addprefix $(LIBFT_DIR), $(LIBFT_NAME)) .
-	mv $(LIBFT_NAME) $(NAME)
-	$(AR) $(NAME) $(OBJS)
-
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_DIR)$(LIBFT_NAME) -o $(NAME)
 
 $(BUILD_DIR)%.o: %.c
 	@mkdir -p $(BUILD_DIR)
