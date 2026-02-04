@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   compute_disorder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 15:50:58 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/03 19:44:35 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/03 21:53:15 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-char	*ft_strdup(const char *str, size_t len)
+int	compute_disorder(stack a)
 {
+	size_t	mistakes;
+	size_t	total_pairs;
 	size_t	i;
-	char	*new_str;
+	size_t	j;
 
 	i = 0;
-	if (!str || len > ft_strlen(str))
-		return (NULL);
-	new_str = malloc(sizeof(char) * (len + 1));
-	if (!new_str)
-		return (NULL);
-	while (i < len)
+	mistakes = 0;
+	total_pairs = 0;
+	while (i < (ft_strlen(a) - 1))
 	{
-		new_str[i] = str[i];
-		i++;
+		j = i + 1;
+		while (j < ft_strlen(a) - 1)
+		{
+			total_pairs++;
+			if (a[i] > a[j])
+				mistakes++;
+		}
 	}
-	new_str[i] = '\0';
-	return (new_str);
+	return (mistakes / total_pairs)
 }
