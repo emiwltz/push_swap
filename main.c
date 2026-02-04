@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/29 12:10:50 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/03 22:19:47 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	ctx_init(t_ctx *ctx)
 {
@@ -21,19 +20,18 @@ void	ctx_init(t_ctx *ctx)
 	ctx->bench_count = 0;
 }
 
-
-int	main(int argc, char** argv)
+int	main(int argc, char **argv)
 {
-  t_ctx	*ctx;
+	t_ctx	*ctx;
 
-  ctx = malloc(sizeof(t_ctx));
-  ctx_init(ctx);
-  if(first_check(argv, argc, *ctx) == 1)
-  {
+	ctx = malloc(sizeof(t_ctx));
+	ctx_init(ctx);
+	if (first_check(argv, argc, *ctx) == 1)
+	{
+		free(ctx);
+		print_error();
+		return (1);
+	}
 	free(ctx);
-	print_error();
-	return (1);
-  }
-  free(ctx);
-  return (0);
+	return (0);
 }

@@ -130,7 +130,8 @@ $(BUILD_DIR)%.o: %.c
 
 clean:
 	rm -f $(OBJS_SRCS) $(DEPS_SRCS) $(OBJS_GNL) $(DEPS_GNL) $(OBJS_PRNTF) $(DEPS_PRNTF)
-	rm -fd $(BUILD_DIR)$(SRC_DIR) $(BUILD_DIR)$(GNL_DIR) $(BUILD_DIR)$(PRNTF_DIR) 
+	rm -fd $(BUILD_DIR)$(SRC_DIR) $(BUILD_DIR)$(GNL_DIR) $(BUILD_DIR)$(PRNTF_DIR)
+	rm -fd $(BUILD_DIR)
 
 fclean:	clean
 >>>>>>> b87d02cfca3a0c3f6005c3abae003012a7d56c66
