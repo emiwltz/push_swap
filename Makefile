@@ -17,6 +17,7 @@ SRCS        = \
 			  lst_addnodefront.c \
 			  lst_newnode.c \
 			  lst_newstack.c \
+			  compute_disorder.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)

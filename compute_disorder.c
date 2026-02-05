@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/05 13:34:04 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:28:48 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,28 @@ int	compute_disorder(t_stack *a)
 {
 	size_t	mistakes;
 	size_t	total_pairs;
-	size_t	i;
-	size_t	j;
+	t_node	*i;
+	t_node	*j;
 
-	i = 0;
+	i = a->head;
 	mistakes = 0;
 	total_pairs = 0;
-	while (i < (a->size - 1))
+	while (i != a->tail)
 	{
-		j = i + 1;
-		while (j < (a->size - 1))
+		j = i->next;
+		while (j != a->tail)
 		{
 			total_pairs++;
-			// if (a[i] > a[j])
-			// 	mistakes++;
+			if (i->value > j->value)
+				mistakes++;
+			j = j->next;
 		}
+		total_pairs++;
+		if (i->value > j->value)
+			mistakes++;
+		i = i->next;
 	}
+	ft_printf("\n--->\nmistakes: %d\n<---\n", mistakes);
+	ft_printf("\n--->\npairs: %d\n<---\n", total_pairs);
 	return (mistakes / total_pairs);
 }
