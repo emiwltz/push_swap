@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/03 22:19:47 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/04 17:28:35 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 
 	ctx = malloc(sizeof(t_ctx));
 	ctx_init(ctx);
-	if (first_check(argv, argc, *ctx) == 1)
+	if (first_check(argv, argc, *ctx))
 	{
 		free(ctx);
 		print_error();

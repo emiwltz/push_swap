@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   lst_addnodefront.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:36:25 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 16:47:58 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/05 13:59:17 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/05 14:02:14 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int c)
+void	lst_addnodefront(t_node **lst, t_node *new, t_stack *stack)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (!new || !lst)
+		return ;
+	new->next = *lst;
+	*lst = new;
+	stack->head = new;
+	stack->size++;
 }
-
-//#include <stdio.h>
-// int main()
-//{
-//  printf("%i", ft_isdigit('e'));
-//  printf("%i", ft_isdigit('4'));
-//  printf("%i", ft_isdigit(' '));
-//  printf("%i", ft_isdigit('Q'));
-//  printf("%i", ft_isdigit('\n'));
-//}

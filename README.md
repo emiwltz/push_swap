@@ -96,7 +96,7 @@ typedef enum e_algo {
 #### 4. **t_ctx** - Contexte d'exécution
 ```c
 typedef struct s_ctx {
-    bool bench_enabled;    // Mode benchmark activé ?
+    int bench_enabled;    // Mode benchmark activé ?
     t_algo algo;           // Algorithme choisi
     int flag_count;        // Nombre de flags algo (doit être ≤ 1)
     int bench_count;       // Nombre de flags bench (doit être ≤ 1)
@@ -214,8 +214,8 @@ Toute erreur affiche "Error\n" sur stderr et retourne 1 :
 - `t_node *stack_peek(t_stack *stack)` : Retourne le nœud du haut sans le retirer
 
 #### stack_utils.c
-- `bool stack_is_empty(t_stack *stack)` : Vérifie si la pile est vide
-- `bool stack_is_sorted(t_stack *stack)` : Vérifie si la pile est triée
+- `int stack_is_empty(t_stack *stack)` : Vérifie si la pile est vide
+- `int stack_is_sorted(t_stack *stack)` : Vérifie si la pile est triée
 - `void stack_print(t_stack *stack)` : Affiche la pile (debug)
 
 #### stack_populate.c

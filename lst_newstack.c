@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   lst_newstack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:36:25 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 16:47:58 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/05 13:51:17 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/05 13:54:18 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int c)
+t_stack	*lst_newstack(t_node *node)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+	t_stack *res;
 
-//#include <stdio.h>
-// int main()
-//{
-//  printf("%i", ft_isdigit('e'));
-//  printf("%i", ft_isdigit('4'));
-//  printf("%i", ft_isdigit(' '));
-//  printf("%i", ft_isdigit('Q'));
-//  printf("%i", ft_isdigit('\n'));
-//}
+	res = malloc(sizeof(t_stack));
+	if (!res)
+		return (NULL);
+	res->head = node;
+	res->tail = node;
+	res->size = 0;
+	return (res);
+}

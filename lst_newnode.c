@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   lst_newnode.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:36:25 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 16:47:58 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/05 13:38:28 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/05 15:36:44 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int c)
+t_node	*lst_newnode(char *value)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+	t_node *res;
 
-//#include <stdio.h>
-// int main()
-//{
-//  printf("%i", ft_isdigit('e'));
-//  printf("%i", ft_isdigit('4'));
-//  printf("%i", ft_isdigit(' '));
-//  printf("%i", ft_isdigit('Q'));
-//  printf("%i", ft_isdigit('\n'));
-//}
+	res = malloc(sizeof(t_node));
+	if (!res)
+		return (NULL);
+	res->value = atoi(value);
+	res->rank = 1;
+	res->next = NULL;
+
+	return (res);
+}

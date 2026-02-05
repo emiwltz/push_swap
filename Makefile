@@ -14,6 +14,10 @@ SRCS        = \
 			  check_double.c \
 			  ft_atol.c \
 			  only_spaces.c \
+			  lst_addnodeback.c \
+			  lst_addnodefront.c \
+			  lst_newnode.c \
+			  lst_newstack.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)

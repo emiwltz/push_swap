@@ -6,11 +6,14 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/03 21:53:15 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 13:34:04 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	compute_disorder(stack a)
+#include "push_swap.h"
+#include <stddef.h>
+
+int	compute_disorder(t_stack *a)
 {
 	size_t	mistakes;
 	size_t	total_pairs;
@@ -20,15 +23,15 @@ int	compute_disorder(stack a)
 	i = 0;
 	mistakes = 0;
 	total_pairs = 0;
-	while (i < (ft_strlen(a) - 1))
+	while (i < (a->size - 1))
 	{
 		j = i + 1;
-		while (j < ft_strlen(a) - 1)
+		while (j < (a->size - 1))
 		{
 			total_pairs++;
-			if (a[i] > a[j])
-				mistakes++;
+			// if (a[i] > a[j])
+			// 	mistakes++;
 		}
 	}
-	return (mistakes / total_pairs)
+	return (mistakes / total_pairs);
 }
