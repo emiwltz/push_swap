@@ -10,7 +10,6 @@ SRCS        = \
 			  set_flags.c\
 			  check_string.c\
 			  print_error.c\
-			  count_payload.c \
 			  check_double.c \
 			  ft_atol.c \
 			  only_spaces.c \

@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/05 22:11:24 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:17:10 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ int					arg_is_valid(char *s);
 void				print_error(void);
 int					is_valid_digit(char *s);
 char				**clean_flags(char **argv, int argc);
-int					count_payload(char **payload);
 long				ft_atol(const char *str);
 int					only_spaces(char *s);
 int					compute_disorder(t_node node, t_stack start);
