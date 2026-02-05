@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/05 22:27:02 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:47:07 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ctx_init(t_ctx *ctx)
 	ctx->flag_count = 0;
 	ctx->bench_count = 0;
 }
+
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -43,7 +45,7 @@ int	main(int argc, char **argv)
 	}
 	ft_printf("\n===\nnum:%d\n===\n", node->value);
 	ft_printf("\n===\nsize:%d\n===\n", stack_a->size);
-	compute_disorder(stack_a);
+	printf("\n@@@@@@\ndisorder: %.2f%%\n@@@@@@\n", compute_disorder(stack_a));
 	free(ctx);
 	return (0);
 }
