@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   count_payload.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:54:05 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/29 09:55:48 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/05 21:23:51 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+// #include "push_swap.h"
 
-int	count_payload(char **payload)
-{
-  int	i;
+// int	count_payload(char **payload)
+// {
+//   int	i;
 
-  i = 0;
-  while (payload[i])
-	i++;
-  return (i);
-}
+//   i = 0;
+//   while (payload[i])
+// 	i++;
+//   return (i);
+// }

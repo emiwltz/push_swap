@@ -6,31 +6,30 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:11:11 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 17:02:39 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:01:00 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 
-int	check_double(int *table, size_t payload_count)
+// should num be long?
+int	check_double(char *number, t_stack **stack_a)
 {
-	size_t	i;
-	size_t	j;
+	t_node	*node;
+	int		num;
 
-	i = 0;
-	while (i < payload_count)
+	if (!(*stack_a))
+		return (1);
+	num = ft_atoi(number);
+	node = (*stack_a)->head;
+	while (node != (*stack_a)->tail)
 	{
-		j = 0;
-		while (j < payload_count)
-		{
-			if (i != j)
-			{
-				if (table[i] == table[j])
-					return (1);
-			}
-			j++;
-		}
-		i++;
+		if (num == node->value)
+			return (0);
+		node = node->next;
 	}
-	return (0);
+	if (num == node->value)
+		return (0);
+	return (1);
 }

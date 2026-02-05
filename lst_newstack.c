@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 13:51:17 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/05 13:54:18 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:15:18 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ t_stack	*lst_newstack(t_node *node)
 		return (NULL);
 	res->head = node;
 	res->tail = node;
-	res->size = 0;
+	res->size = 1;
 	return (res);
 }

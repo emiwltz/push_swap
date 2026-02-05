@@ -6,10 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 13:38:28 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/05 15:36:44 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 16:53:35 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 t_node	*lst_newnode(char *value)

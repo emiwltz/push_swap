@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 17:28:35 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/05 22:14:12 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,26 @@ void	ctx_init(t_ctx *ctx)
 int	main(int argc, char **argv)
 {
 	t_ctx	*ctx;
+	t_stack	*stack_a;
+	t_node	*node;
 
+	stack_a = NULL;
 	ctx = malloc(sizeof(t_ctx));
 	ctx_init(ctx);
-	if (first_check(argv, argc, *ctx))
+	if (first_check(argv, argc, *ctx, &stack_a))
 	{
 		free(ctx);
 		print_error();
 		return (1);
 	}
+	node = stack_a->head;
+	while (node != stack_a->tail)
+	{
+		ft_printf("\n===\nnum:%d\n===\n", node->value);
+		node = node->next;
+	}
+	ft_printf("\n===\nnum:%d\n===\n", node->value);
+	ft_printf("\n===\nsize:%d\n===\n", stack_a->size);
 	free(ctx);
 	return (0);
 }
