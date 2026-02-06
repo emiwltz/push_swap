@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/05 22:11:12 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/06 15:05:58 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,20 @@ t_stack	*initialize_stack_a(t_node *node)
 	return (res);
 }
 
+int	clear_split(char **numbers)
+{
+	size_t	i;
+
+	i = 0;
+	while (numbers[i])
+	{
+		free(numbers[i]);
+		i++;
+	}
+	free(numbers);
+	return (0);
+}
+
 int	populate_stack_a(char *value, t_stack **stack_a)
 {
 	size_t	i;
@@ -82,19 +96,17 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 		if (is_valid_digit(numbers[i]) && check_double(numbers[i], stack_a))
 		{
 			if (!(node = lst_newnode(numbers[i])))
-				return (0);
+				return (clear_split(numbers));
 			if (*stack_a)
 				lst_addnodeback(node, stack_a);
-			else
-			{
-				if (!(*stack_a = initialize_stack_a(node)))
-					return (0);
-			}
+			else if (!(*stack_a = initialize_stack_a(node)))
+				return (clear_split(numbers));
 		}
 		else
-			return (0);
+			return (clear_split(numbers));
 		i++;
 	}
+	free(numbers);
 	return (1);
 }
 

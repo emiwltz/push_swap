@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/05 22:35:38 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/06 14:18:13 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ t_stack				*lst_newstack(t_node *node);
 t_node				*lst_newnode(char *value);
 void				lst_addnodeback(t_node *new, t_stack **stack);
 void				lst_addnodefront(t_node **lst, t_node *new, t_stack *stack);
+void				lst_clear(t_stack **lst);
 t_stack				*initialize_stack_a(t_node *node);
 #endif

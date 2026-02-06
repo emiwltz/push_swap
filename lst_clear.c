@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_newnode.c                                      :+:      :+:    :+:   */
+/*   lst_clear.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 13:38:28 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/06 14:14:45 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/06 14:15:49 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/06 14:46:09 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
 #include "push_swap.h"
 
-t_node	*lst_newnode(char *value)
+void	lst_clear(t_stack **stack)
 {
-	t_node *res;
+	t_node *temp;
+	t_node *n;
 
-	res = malloc(sizeof(t_node));
-	if (!res)
-		return (NULL);
-	res->value = atoi(value);
-	res->rank = 1;
-	res->next = NULL;
-	free(value);
-	return (res);
+	if (!stack)
+		return ;
+	temp = (*stack)->head;
+	while (temp != (*stack)->tail)
+	{
+		n = temp->next;
+		free(temp);
+		temp = n;
+	}
+	free(temp);
+	free(*stack);
 }
