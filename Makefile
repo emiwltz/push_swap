@@ -1,24 +1,24 @@
 NAME        = push_swap
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3
+CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3 -I.
 
 SRCS        = \
               main.c\
-			  ft_strcmp.c\
-			  check_args.c\
-			  set_flags.c\
-			  check_string.c\
-			  print_error.c\
-			  check_double.c \
-			  ft_atol.c \
-			  only_spaces.c \
-			  lst_addnodeback.c \
-			  lst_addnodefront.c \
-			  lst_newnode.c \
-			  lst_newstack.c \
-			  lst_clear.c \
-			  compute_disorder.c \
+			  utils/ft_strcmp.c\
+			  checks_and_parsing/check_args.c\
+			  checks_and_parsing/set_flags.c\
+			  utils/check_string.c\
+			  utils/print_error.c\
+			  checks_and_parsing/check_double.c \
+			  utils/ft_atol.c \
+			  utils/only_spaces.c \
+			  checks_and_parsing/lst_addnodeback.c \
+			  checks_and_parsing/lst_addnodefront.c \
+			  checks_and_parsing/lst_newnode.c \
+			  checks_and_parsing/lst_newstack.c \
+			  checks_and_parsing/lst_clear.c \
+			  utils/compute_disorder.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)
@@ -36,13 +36,13 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_DIR)$(LIBFT_NAME) -o $(NAME)
 
 $(BUILD_DIR)%.o: %.c
-	@mkdir -p $(BUILD_DIR)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	make -C $(LIBFT)/ clean
 	rm -f $(OBJS) $(DEPS)
-	rm -fd $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
 
 fclean: clean
 	make -C $(LIBFT)/ fclean
