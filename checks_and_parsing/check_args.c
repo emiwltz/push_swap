@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/06 14:41:46 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/07 11:48:17 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	arg_is_valid(char *s)
 	i = 0;
 	while (numbers[i])
 	{
-		if (!is_digit_string(numbers[i]) || only_spaces(numbers[i])
+		if (!is_digit_string(numbers[i]) || only_spaces(s)
 			|| (ft_atol(numbers[i]) > INT_MAX || ft_atol(numbers[i]) < INT_MIN))
 		{
 			i = -1;

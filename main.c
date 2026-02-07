@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/06 15:09:09 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/07 11:27:06 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	ctx = malloc(sizeof(t_ctx));
 	ctx_init(ctx);
+	if (argc < 2)
+	  return (1);
 	if (first_check(argv, argc, *ctx, &stack_a))
 	{
 		free(ctx);
