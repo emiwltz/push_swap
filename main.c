@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/07 11:27:06 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/08 13:25:11 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,23 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	node = stack_a->head;
+	ft_printf("\n===\nnum first next:%p\n===\n", node);
 	while (node != stack_a->tail)
 	{
 		ft_printf("\n===\nnum:%d\n===\n", node->value);
 		node = node->next;
 	}
 	ft_printf("\n===\nnum:%d\n===\n", node->value);
+	ft_printf("\n===\nnum next:%p\n===\n", node->next);
 	ft_printf("\n$$$$$\nsize:%d\n$$$$$\n", stack_a->size);
 	printf("\n@@@@@@\ndisorder: %.2f%%\n@@@@@@\n", compute_disorder(stack_a));
 	lst_clear(&stack_a);
+	// swap(stack_a);
+	// while (node != stack_a->tail)
+	// {
+	// 	ft_printf("\n===\nnum:%d\n===\n", node->value);
+	// 	node = node->next;
+	// }
 	free(ctx);
 	return (0);
 }

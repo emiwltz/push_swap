@@ -19,6 +19,7 @@ SRCS        = \
 			  checks_and_parsing/lst_newstack.c \
 			  checks_and_parsing/lst_clear.c \
 			  utils/compute_disorder.c \
+			  ops/swap.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)

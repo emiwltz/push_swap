@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 13:41:20 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/05 17:20:32 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/08 13:46:04 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	lst_addnodeback(t_node *new, t_stack **stack)
 {
-	t_node	*temp;
+	// t_node	*temp;
 
-	temp = (*stack)->head;
+	// temp = (*stack)->tail;
 	if (!new || !stack)
 		return ;
-	if (!temp)
+	if (!(*stack)->tail)
 	{
 		new->next = NULL;
 		(*stack)->head = new;
@@ -27,10 +27,12 @@ void	lst_addnodeback(t_node *new, t_stack **stack)
 		(*stack)->size = 1;
 		return ;
 	}
-	while (temp != (*stack)->tail)
-		temp = temp->next;
-	temp->next = new;
+	// change node to point to new last
+	(*stack)->tail->next = new;
+	// change stack->tail to new last node address
 	(*stack)->tail = new;
+	// point new last node to head node
 	new->next = (*stack)->head;
+	// adjust size of stack
 	(*stack)->size++;
 }
