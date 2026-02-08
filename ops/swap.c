@@ -6,22 +6,20 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 10:33:10 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/08 13:19:03 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/08 16:53:17 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_stack *stack)
+void	swap(t_stack **stack)
 {
-  t_node *tmp;
-
-  tmp = NULL;
-  if (!stack || stack->size < 2)
+  if (!(*stack) || (*stack)->size < 2) 
 	return ;
-  tmp = stack->head;
-  stack->head = stack->head->next;
-  stack->head->next = tmp;
-  stack->head->next = stack->head->next->next;
+
+  (*stack)->tail->next = (*stack)->head->next;
+  (*stack)->head->next = (*stack)->head->next->next;
+  (*stack)->tail->next->next = (*stack)->head;
+  (*stack)->head = (*stack)->tail->next;
 }
 

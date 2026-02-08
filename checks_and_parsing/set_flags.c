@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/06 15:05:58 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/08 18:27:07 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	set_flags(char *str, t_ctx *ctx)
 	return (0);
 }
 
-t_stack	*initialize_stack_a(t_node *node)
+t_stack	*initialize_stack(t_node *node)
 {
 	t_stack	*res;
 
@@ -99,7 +99,7 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 				return (clear_split(numbers));
 			if (*stack_a)
 				lst_addnodeback(node, stack_a);
-			else if (!(*stack_a = initialize_stack_a(node)))
+			else if (!(*stack_a = initialize_stack(node)))
 				return (clear_split(numbers));
 		}
 		else

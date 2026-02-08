@@ -20,6 +20,9 @@ SRCS        = \
 			  checks_and_parsing/lst_clear.c \
 			  utils/compute_disorder.c \
 			  ops/swap.c \
+			  ops/rotate.c \
+			  ops/reverse_rotate.c \
+			  ops/push.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)
