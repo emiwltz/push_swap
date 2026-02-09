@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:10:22 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:14:07 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:28:41 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
   push(stack_a, stack_b);
-  ft_printf("pb");
+  ft_printf("pb\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:22:10 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:23:41 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:28:57 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	rra(t_stack **stack_a)
 {
   reverse_rotate(stack_a);
-  ft_printf("rra");
+  ft_printf("rra\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:23:51 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:24:18 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:29:01 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	rrb(t_stack **stack_b)
 {
   reverse_rotate(stack_b);
-  ft_printf("rrb");
+  ft_printf("rrb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 23:04:57 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/09 23:27:10 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ int	main(int argc, char **argv)
 	node_a = stack_a->head;
 	while (node_a != stack_a->tail)
 	{
-		printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
+		printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 		node_a = node_a->next;
 	}
-	printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
+	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_a->size);
 	printf("\n@@@@@@\ndisorder: %.2f%%\n@@@@@@\n", compute_disorder(stack_a));
 	if (stack_b)
@@ -61,33 +61,31 @@ int	main(int argc, char **argv)
 		node_b = stack_b->head;
 		while (node_b != stack_b->tail)
 		{
-			printf("\n===\nnum:%d  (%d)\n===\n", node_b->value, node_b->rank);
+			printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
 			node_b = node_b->next;
 		}
-		printf("\n===\nnum:%d  (%d)\n===\n", node_b->value, node_b->rank);
+		printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
 		printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_b->size);
 	}
-	printf("\n88888888888888888888888888\npb->pa\n88888888888888888888888888\n");
-	pb(&stack_a, &stack_b);
-	// pb(&stack_a, &stack_b);
-	pa(&stack_b, &stack_a);
+	printf("\n88888888888888888888888888\nselection\n88888888888888888888888888\n");
+	selection(&stack_a, &stack_b);
 	node_a = stack_a->head;
 	while (node_a != stack_a->tail)
 	{
-		printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
+		printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 		node_a = node_a->next;
 	}
-	printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
+	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_a->size);
 	if (stack_b)
 	{
 		node_b = stack_b->head;
 		while (node_b != stack_b->tail)
 		{
-			printf("\n===\nnum:%d  (%d)\n===\n", node_b->value, node_b->rank);
+			printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
 			node_b = node_b->next;
 		}
-		printf("\n===\nnum:%d  (%d)\n===\n", node_b->value, node_b->rank);
+		printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
 		printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_b->size);
 		printf("\n222222222222222\n%p\n222222222222222\n", stack_b->head);
 	}

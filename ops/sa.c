@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:26:10 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:26:42 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:29:08 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	sa(t_stack **stack_a)
 {
   swap(stack_a);
-  ft_printf("sa");
+  ft_printf("sa\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:06:41 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:14:32 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:28:37 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	pa(t_stack **stack_b, t_stack **stack_a)
 {
   push(stack_b, stack_a);
-  ft_printf("pa");
+  ft_printf("pa\n");
 }

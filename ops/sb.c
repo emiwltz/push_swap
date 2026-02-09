@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:26:45 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:26:59 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:29:12 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	sb(t_stack **stack_b)
 {
   swap(stack_b);
-  ft_printf("sb");
+  ft_printf("sb\n");
 }

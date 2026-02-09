@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 21:48:06 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/09 23:16:45 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct s_ctx
 typedef struct s_node
 {
 	int				value;
-	int				rank;
+	size_t			rank;
 	struct s_node	*next;
 }					t_node;
 
@@ -59,7 +59,7 @@ void				error_msg(void);
 int					ft_strcmp(const char *str1, const char *str2);
 int					is_digit_string(char *s);
 int					first_check(char **argv, int argc, t_ctx ctx,
-					t_stack **stack_a);
+						t_stack **stack_a);
 int					set_flags(char *str, t_ctx *ctx);
 int					arg_is_valid(char *s);
 void				print_error(void);

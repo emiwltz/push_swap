@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:19:22 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:20:24 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 23:28:49 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 void	rb(t_stack **stack_b)
 {
   rotate(stack_b);
-  ft_printf("rb");
+  ft_printf("rb\n");
 }
