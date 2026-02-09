@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 11:41:55 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 11:52:02 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,25 +91,28 @@ int	main(int argc, char **argv)
 
 
 	push(&stack_a, &stack_b);
+	push(&stack_a, &stack_b);
+	push(&stack_a, &stack_b);
 	node_a = stack_a->head;
 	node_b = stack_b->head;
 	printf("\npush*********************************\n");
 	printf("\n&&&\na->head: %d\na->stack_tail: %d\n&&&\n", stack_a->head->value, stack_a->tail->value);
-	printf("\n&&&\nhead: %d\ntail: %d\n&&&\n", stack_b->head->value, stack_b->tail->value);
+	printf("\n&&&\nb->head: %d\nb->tail: %d\n&&&\n", stack_b->head->value, stack_b->tail->value);
 	while (node_a != stack_a->tail)
 	{
-		printf("\n===\nnum:%d\n===\n", node_a->value);
+		printf("\n===\na->num:%d\n===\n", node_a->value);
 		node_a = node_a->next;
 	}
-	printf("\n===\nnum:%d\n===\n", node_a->value);
-	printf("\n===\nnum next:%p\n===\n", node_a->next);
+	printf("\n===\na->num:%d\n===\n", node_a->value);
+	printf("\n===\na->num next:%p\n===\n", node_a->next);
+	printf("\n***************stack_b******************\n");
 	while (node_b != stack_b->tail)
 	{
-		printf("\n===\nnum:%d\n===\n", node_b->value);
+		printf("\n===\nb->num:%d\n===\n", node_b->value);
 		node_b = node_b->next;
 	}
-	printf("\n===\nnum:%d\n===\n", node_b->value);
-	printf("\n===\nnum next:%p\n===\n", node_b->next);
+	printf("\n===\nb->num:%d\n===\n", node_b->value);
+	printf("\n===\nb->num next:%p\n===\n", node_b->next);
 
 
 
