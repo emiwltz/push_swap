@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 20:00:24 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/09 13:34:22 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void				error_msg(void);
 int					ft_strcmp(const char *str1, const char *str2);
 int					is_digit_string(char *s);
 int					first_check(char **argv, int argc, t_ctx ctx,
-						t_stack **stack_a);
+					t_stack **stack_a);
 int					set_flags(char *str, t_ctx *ctx);
 int					arg_is_valid(char *s);
 void				print_error(void);
@@ -80,5 +80,16 @@ void				swap(t_stack **stack);
 void				rotate(t_stack **stack);
 void				reverse_rotate(t_stack **stack);
 int					push(t_stack **stack_a, t_stack **stack_b);
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				ss(t_stack **stack_b, t_stack **stack_a);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
+void				pa(t_stack **stack_b, t_stack **stack_a);
+void				pb(t_stack **stack_a, t_stack **stack_b);
 void				set_ranks(t_stack **stack);
 #endif

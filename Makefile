@@ -20,10 +20,21 @@ SRCS        = \
 			  checks_and_parsing/lst_clear.c \
 			  checks_and_parsing/set_ranks.c \
 			  utils/compute_disorder.c \
-			  ops/swap.c \
-			  ops/rotate.c \
-			  ops/reverse_rotate.c \
-			  ops/push.c \
+			  ops/raw/swap.c \
+			  ops/raw/rotate.c \
+			  ops/raw/reverse_rotate.c \
+			  ops/raw/push.c \
+			  ops/pa.c \
+			  ops/pb.c \
+			  ops/sa.c \
+			  ops/sb.c \
+			  ops/ss.c \
+			  ops/ra.c \
+			  ops/rb.c \
+			  ops/rr.c \
+			  ops/rra.c \
+			  ops/rrb.c \
+			  ops/rrr.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)
