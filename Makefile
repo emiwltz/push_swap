@@ -35,6 +35,7 @@ SRCS        = \
 			  ops/rra.c \
 			  ops/rrb.c \
 			  ops/rrr.c \
+			  sorts/selection.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)

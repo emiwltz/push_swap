@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 13:34:22 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 21:48:06 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,5 @@ void				rrr(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_stack **stack_b, t_stack **stack_a);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				set_ranks(t_stack **stack);
+void				selection(t_stack **stack_a, t_stack **stack_b);
 #endif
