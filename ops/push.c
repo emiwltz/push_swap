@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 17:05:06 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/08 18:44:19 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 11:40:18 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,15 @@ int	push(t_stack **stack_a, t_stack **stack_b)
 	  return (0);
 	}
 	else {
-	  (*stack_b)->head->next = NULL;
 	  (*stack_a)->tail->next = (*stack_a)->head->next;
-	  (*stack_a)->head = (*stack_a)->head->next;
+	  (*stack_a)->head->next = NULL;
+	  (*stack_a)-> head = (*stack_a)->tail->next;
 	  (*stack_a)->size--;
+
+	  // (*stack_b)->head->next = NULL;
+	  // (*stack_a)->tail->next = (*stack_a)->head->next;
+	  // (*stack_a)->head = (*stack_a)->head->next;
+	  // (*stack_a)->size--;
 	}
   }
   else 
