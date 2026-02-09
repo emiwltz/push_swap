@@ -30,12 +30,14 @@ int	main(int argc, char **argv)
 	t_node	*node_a;
 	t_node	*node_b;
 
+	(void)node_a;
+	(void)node_b;
 	stack_a = NULL;
 	stack_b = NULL;
 	ctx = malloc(sizeof(t_ctx));
 	ctx_init(ctx);
 	if (argc < 2)
-	  return (1);
+		return (1);
 	if (first_check(argv, argc, *ctx, &stack_a))
 	{
 		free(ctx);
@@ -45,15 +47,12 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	node_a = stack_a->head;
-	printf("\n===\nnum first next:%p\n===\n", node_a);
-	printf("\n===\nnum second next:%p\n===\n", node_a->next);
 	while (node_a != stack_a->tail)
 	{
-		printf("\n===\nnum:%d\n===\n", node_a->value);
+		printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
 		node_a = node_a->next;
 	}
-	printf("\n===\nnum:%d\n===\n", node_a->value);
-	printf("\n===\nnum next:%p\n===\n", node_a->next);
+	printf("\n===\nnum:%d  (%d)\n===\n", node_a->value, node_a->rank);
 	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_a->size);
 	printf("\n@@@@@@\ndisorder: %.2f%%\n@@@@@@\n", compute_disorder(stack_a));
 	// swap(&stack_a);

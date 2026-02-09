@@ -18,6 +18,7 @@ SRCS        = \
 			  checks_and_parsing/lst_newnode.c \
 			  checks_and_parsing/lst_newstack.c \
 			  checks_and_parsing/lst_clear.c \
+			  checks_and_parsing/set_ranks.c \
 			  utils/compute_disorder.c \
 			  ops/raw/swap.c \
 			  ops/raw/rotate.c \

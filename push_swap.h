@@ -91,4 +91,5 @@ void				rrb(t_stack **stack_b);
 void				rrr(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_stack **stack_b, t_stack **stack_a);
 void				pb(t_stack **stack_a, t_stack **stack_b);
+void				set_ranks(t_stack **stack);
 #endif
