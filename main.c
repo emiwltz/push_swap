@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 11:52:02 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 14:15:13 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,21 @@ int	main(int argc, char **argv)
 	// printf("\n===\nnum next:%p\n===\n", node_a->next);
 	// printf("\n&&&\nhead: %d\ntail: %d\n&&&\n", stack_a->head->value, stack_a->tail->value);
 
+	// sa(&stack_a);
+	// sb(&stack_b);
+	// ss( &stack_b, &stack_a);
+	// ra( &stack_a);
+	// rb( &stack_b);
+	// rr( &stack_a, &stack_b);
+	// rra(&stack_a);
+	// rrb(&stack_b);
+	rrr(&stack_a, &stack_b);
+	// pb(&stack_a, &stack_b);
+	// pa(&stack_b, &stack_a);
 
 
-	push(&stack_a, &stack_b);
-	push(&stack_a, &stack_b);
-	push(&stack_a, &stack_b);
+
+	// push(&stack_a, &stack_b);
 	node_a = stack_a->head;
 	node_b = stack_b->head;
 	printf("\npush*********************************\n");
