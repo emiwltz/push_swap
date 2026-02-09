@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/08 17:49:11 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 20:00:24 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ t_stack				*initialize_stack(t_node *node);
 void				swap(t_stack **stack);
 void				rotate(t_stack **stack);
 void				reverse_rotate(t_stack **stack);
-int				push(t_stack **stack_a, t_stack **stack_b);
+int					push(t_stack **stack_a, t_stack **stack_b);
+void				set_ranks(t_stack **stack);
 #endif

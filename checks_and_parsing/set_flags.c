@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/08 18:27:07 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 20:00:51 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,7 @@ int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
 			return (1);
 		if (!populate_stack_a(argv[i], stack_a))
 			return (1);
+		set_ranks(stack_a);
 		i++;
 	}
 	if (ctx.flag_count > 1 || ctx.bench_count > 1)
