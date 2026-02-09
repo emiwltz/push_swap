@@ -3,47 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 17:05:06 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 11:40:18 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/09 22:45:43 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-int	push(t_stack **stack_a, t_stack **stack_b)
+int	push(t_stack **stack_from, t_stack **stack_to)
 {
-  if (!(*stack_b))
-  {
-	if (!(*stack_b = initialize_stack((*stack_a)->head)))
+	if (!(*stack_to))
 	{
-	  lst_clear(stack_a);
-	  lst_clear(stack_b);
-	  return (0);
+		if (!(*stack_to = initialize_stack((*stack_from)->head)))
+		{
+			lst_clear(stack_from);
+			lst_clear(stack_to);
+			return (0);
+		}
+		else
+		{
+			(*stack_from)->tail->next = (*stack_from)->head->next;
+			(*stack_from)->head->next = NULL;
+			(*stack_from)->head = (*stack_from)->tail->next;
+			(*stack_from)->size--;
+		}
 	}
-	else {
-	  (*stack_a)->tail->next = (*stack_a)->head->next;
-	  (*stack_a)->head->next = NULL;
-	  (*stack_a)-> head = (*stack_a)->tail->next;
-	  (*stack_a)->size--;
-
-	  // (*stack_b)->head->next = NULL;
-	  // (*stack_a)->tail->next = (*stack_a)->head->next;
-	  // (*stack_a)->head = (*stack_a)->head->next;
-	  // (*stack_a)->size--;
+	else
+	{
+		if ((*stack_from)->size == 1)
+		{
+			(*stack_to)->tail->next = (*stack_from)->head;
+			(*stack_from)->head->next = (*stack_to)->head;
+			(*stack_to)->head = (*stack_to)->tail->next;
+			(*stack_from)->head = NULL;
+			(*stack_from)->tail = NULL;
+			(*stack_from)->size--;
+			(*stack_to)->size++;
+			lst_clear(stack_from);
+		}
+		else
+		{
+			(*stack_from)->tail->next = (*stack_from)->head->next;
+			(*stack_to)->tail->next = (*stack_from)->head;
+			(*stack_from)->head->next = (*stack_to)->head;
+			(*stack_from)->head = (*stack_from)->tail->next;
+			(*stack_to)->head = (*stack_to)->tail->next;
+			(*stack_from)->size--;
+			(*stack_to)->size++;
+		}
 	}
-  }
-  else 
-  {
-	(*stack_a)->tail->next = (*stack_a)->head->next;
-	(*stack_b)->tail->next = (*stack_a)->head;
-	(*stack_a)->head->next = (*stack_b)->head;
-	(*stack_a)->head = (*stack_a)->tail->next;
-	(*stack_b)->head = (*stack_b)->tail->next;
-	(*stack_a)->size--;
-	(*stack_b)->size++;
-  }
-  return (1);
+	return (1);
 }
