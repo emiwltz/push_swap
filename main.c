@@ -78,6 +78,7 @@ int	main(int argc, char **argv)
 		printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 		node_a = node_a->next;
 	}
+	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 
 	// sa(&stack_a);
 	// sb(&stack_b);
