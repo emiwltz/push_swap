@@ -22,6 +22,5 @@ t_node	*lst_newnode(char *value)
 	res->value = atoi(value);
 	res->rank = 1;
 	res->next = NULL;
-	free(value);
 	return (res);
 }

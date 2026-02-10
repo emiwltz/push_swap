@@ -6,13 +6,14 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 11:09:32 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/04 17:28:27 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/10 13:21:57 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_error(void)
+int	print_error(void)
 {
-  write(2, "Error", 6);
+  write(2, "Error\n", 6);
+  return (1);
 }

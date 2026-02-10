@@ -6,10 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/07 11:48:17 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/10 13:31:49 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 #include <limits.h>
 
@@ -39,7 +40,11 @@ int	arg_is_valid(char *s)
 	size_t	i;
 	char	**numbers;
 
+	if(only_spaces(s))
+	  return (0);
 	numbers = ft_split((const char *)s, ' ');
+	if(!numbers)
+	  return (0);
 	i = 0;
 	while (numbers[i])
 	{

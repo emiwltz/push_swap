@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 23:16:45 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/10 14:31:02 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,20 @@ typedef struct s_stack
 	size_t			size;
 }					t_stack;
 
-void				error_msg(void);
 int					ft_strcmp(const char *str1, const char *str2);
 int					is_digit_string(char *s);
 int					first_check(char **argv, int argc, t_ctx ctx,
 						t_stack **stack_a);
 int					set_flags(char *str, t_ctx *ctx);
 int					arg_is_valid(char *s);
-void				print_error(void);
+int				print_error(void);
 int					is_valid_digit(char *s);
 char				**clean_flags(char **argv, int argc);
 long				ft_atol(const char *str);
 int					only_spaces(char *s);
 float				compute_disorder(t_stack *a);
 int					set_algo(char *flag, t_ctx *ctx);
-int					check_double(char *number, t_stack **stack_a);
+int					check_double(t_stack **stack_a);
 t_stack				*lst_newstack(t_node *node);
 t_node				*lst_newnode(char *value);
 void				lst_addnodeback(t_node *new, t_stack **stack);

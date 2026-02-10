@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:26:59 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/09 20:00:51 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/10 14:32:42 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,12 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 	t_node	*node;
 
 	numbers = ft_split((const char *)value, ' ');
+	if (!numbers)
+		return (0);
 	i = 0;
 	while (numbers[i])
 	{
-		if (is_valid_digit(numbers[i]) && check_double(numbers[i], stack_a))
+		if (is_valid_digit(numbers[i]))
 		{
 			if (!(node = lst_newnode(numbers[i])))
 				return (clear_split(numbers));
@@ -106,7 +108,9 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 			return (clear_split(numbers));
 		i++;
 	}
-	free(numbers);
+	if (!check_double(stack_a))
+		return (clear_split(numbers));
+	clear_split(numbers);
 	return (1);
 }
 
@@ -114,8 +118,10 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
 {
 	int	i;
+	int	numbers;
 
 	i = 1;
+	numbers = 0;
 	while (i < argc)
 	{
 		if (set_flags(argv[i], &ctx))
@@ -131,8 +137,9 @@ int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
 			return (1);
 		set_ranks(stack_a);
 		i++;
+		numbers++;
 	}
-	if (ctx.flag_count > 1 || ctx.bench_count > 1)
+	if (ctx.flag_count > 1 || ctx.bench_count > 1 || numbers < 1)
 		return (1);
 	return (0);
 }
