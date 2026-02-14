@@ -13,8 +13,9 @@
 
 #include "push_swap.h"
 
-void	pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 {
-  push(stack_a, stack_b);
-  ft_printf("pb\n");
+	push(stack_a, stack_b);
+	ctx->pb_count++;
+	ft_printf("pb\n");
 }

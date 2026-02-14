@@ -22,7 +22,7 @@ int	read_bit(size_t number, size_t bit_index)
 }
 
 
-void	radix(t_stack **a, t_stack **b)
+void	radix(t_stack **a, t_stack **b, t_ctx *ctx)
 {
 	size_t	index_bit;
 	size_t	i;
@@ -35,16 +35,16 @@ void	radix(t_stack **a, t_stack **b)
 	{
 		stack_size = (*a)->size;
 		i = 0;
-		while (i < stack_size && *a && (*a)->head)
-		{
-			if (read_bit((*a)->head->rank, index_bit))
-				ra(a);
-			else
-				pb(a, b);
-			i++;
+			while (i < stack_size && *a && (*a)->head)
+			{
+				if (read_bit((*a)->head->rank, index_bit))
+					ra(a, ctx);
+				else
+					pb(a, b, ctx);
+				i++;
+			}
+			while (*b && (*b)->size > 0)
+				pa(b, a, ctx);
+			index_bit++;
 		}
-		while (*b && (*b)->size > 0)
-			pa(b, a);
-		index_bit++;
-	}
 }

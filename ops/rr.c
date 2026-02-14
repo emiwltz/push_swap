@@ -12,9 +12,10 @@
 
 #include "push_swap.h"
 
-void	rr(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 {
-  rotate(stack_a);
-  rotate(stack_b);
-  ft_printf("rr\n");
+	rotate(stack_a);
+	rotate(stack_b);
+	ctx->rr_count++;
+	ft_printf("rr\n");
 }

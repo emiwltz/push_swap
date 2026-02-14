@@ -12,8 +12,9 @@
 
 #include "push_swap.h"
 
-void	sa(t_stack **stack_a)
+void	sa(t_stack **stack_a, t_ctx *ctx)
 {
-  swap(stack_a);
-  ft_printf("sa\n");
+	swap(stack_a);
+	ctx->sa_count++;
+	ft_printf("sa\n");
 }

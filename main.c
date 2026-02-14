@@ -19,16 +19,17 @@ void	ctx_init(t_ctx *ctx)
 	ctx->bench_enabled = 0;
 	ctx->flag_count = 0;
 	ctx->bench_count = 0;
-  ctx->pa_count = 0;
-  ctx->pb_count = 0;
-  ctx->ra_count = 0;
-  ctx->rb_count = 0;
-  ctx->rr_count = 0;
-  ctx->rra_count = 0;
-  ctx->rrb_count = 0;
-  ctx->rrr_count = 0;
-  ctx->sa_count = 0;
-  ctx->sb_count = 0;
+	ctx->pa_count = 0;
+	ctx->pb_count = 0;
+	ctx->ra_count = 0;
+	ctx->rb_count = 0;
+	ctx->rr_count = 0;
+	ctx->rra_count = 0;
+	ctx->rrb_count = 0;
+	ctx->rrr_count = 0;
+	ctx->sa_count = 0;
+	ctx->sb_count = 0;
+	ctx->ss_count = 0;
 
 }
 
@@ -60,7 +61,7 @@ int	main(int argc, char **argv)
 			lst_clear(&stack_a);
 		return(print_error());
 	}
-  choose_algo(&stack_a, &stack_b, &ctx);
+	choose_algo(&stack_a, &stack_b, ctx);
 
 
 
@@ -94,7 +95,7 @@ int	main(int argc, char **argv)
 	}
   
 	ft_printf("----------------apres--------------------");
-	radix(&stack_a, &stack_b);
+	radix(&stack_a, &stack_b, ctx);
 	node_a = stack_a->head;
 	while (node_a != stack_a->tail)
 	{
@@ -103,17 +104,17 @@ int	main(int argc, char **argv)
 	}
 	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
 
-	// sa(&stack_a);
-	// sb(&stack_b);
-	// ss(&stack_b, &stack_a);
-	// ra(&stack_a);
-	// rb(&stack_b);
-	// rr(&stack_a, &stack_b);
-	// rra(&stack_a);
-	// rrb(&stack_b);
-	// rrr(&stack_a, &stack_b);
-	// pa(&stack_b, &stack_a);
-	// pb(&stack_a, &stack_b);
+	// sa(&stack_a, ctx);
+	// sb(&stack_b, ctx);
+	// ss(&stack_b, &stack_a, ctx);
+	// ra(&stack_a, ctx);
+	// rb(&stack_b, ctx);
+	// rr(&stack_a, &stack_b, ctx);
+	// rra(&stack_a, ctx);
+	// rrb(&stack_b, ctx);
+	// rrr(&stack_a, &stack_b, ctx);
+	// pa(&stack_b, &stack_a, ctx);
+	// pb(&stack_a, &stack_b, ctx);
 	// ft_printf("----------------apres--------------------");
 	// node_a = stack_a->head;
 	// while (node_a != stack_a->tail)
@@ -136,7 +137,7 @@ int	main(int argc, char **argv)
 	// 	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_b->size);
 	// }
 	// // printf("\n88888888888888888888888888\nselection\n88888888888888888888888888\n");
-	// // selection(&stack_a, &stack_b);
+	// // selection(&stack_a, &stack_b, ctx);
 	// // node_a = stack_a->head;
 	// // while (node_a != stack_a->tail)
 	// // {

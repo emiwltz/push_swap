@@ -13,8 +13,9 @@
 #include "libft/includes/libft.h"
 #include "push_swap.h"
 
-void	ra(t_stack **stack_a)
+void	ra(t_stack **stack_a, t_ctx *ctx)
 {
-  rotate(stack_a);
-  ft_printf("ra\n");
+	rotate(stack_a);
+	ctx->ra_count++;
+	ft_printf("ra\n");
 }

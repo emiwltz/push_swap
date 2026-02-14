@@ -13,7 +13,7 @@
 #include "../push_swap.h"
 #include <stdio.h>
 
-void	selection(t_stack **stack_a, t_stack **stack_b)
+void	selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 {
 	size_t	pos;
 
@@ -22,14 +22,14 @@ void	selection(t_stack **stack_a, t_stack **stack_b)
 	{
 		if ((*stack_a)->head->rank == pos)
 		{
-			pb(stack_a, stack_b);
+			pb(stack_a, stack_b, ctx);
 			pos++;
 			continue ;
 		}
-		ra(stack_a);
+		ra(stack_a, ctx);
 	}
 	while ((*stack_b))
 	{
-		pa(stack_b, stack_a);
+		pa(stack_b, stack_a, ctx);
 	}
 }

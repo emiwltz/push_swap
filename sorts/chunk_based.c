@@ -19,7 +19,7 @@ int get_sqrt(size_t size)
 
 
 
-void  chunk_based(t_stack **a, t_stack **b)
+void  chunk_based(t_stack **a, t_stack **b, t_ctx *ctx)
 {
   size_t  chunk_size;
   size_t  chunk_min;
@@ -36,13 +36,13 @@ void  chunk_based(t_stack **a, t_stack **b)
     {
       if ((*a)->head->rank > chunk_min && (*a)->head->rank < chunk_max)
       {
-        pb(a, b);
+        pb(a, b, ctx);
         chunk_count++;
       }
       else
-        ra(a);
+        ra(a, ctx);
     }
     while ((*b))
-      pa(b,a);
+      pa(b, a, ctx);
   }
 }
