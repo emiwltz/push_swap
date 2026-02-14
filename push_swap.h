@@ -39,6 +39,17 @@ typedef struct s_ctx
 	t_algo			algo;
 	int				flag_count;
 	int				bench_count;
+  int       pa_count;
+  int       pb_count;
+  int       ra_count;
+  int       rb_count;
+  int       rr_count;
+  int       rra_count;
+  int       rrb_count;
+  int       rrr_count;
+  int       sa_count;
+  int       sb_count;
+  int       ss_count;
 }					t_ctx;
 
 typedef struct s_node
@@ -88,11 +99,12 @@ void				rr(t_stack **stack_a, t_stack **stack_b);
 void				rra(t_stack **stack_a);
 void				rrb(t_stack **stack_b);
 void				rrr(t_stack **stack_a, t_stack **stack_b);
-void				pa(t_stack **stack_b, t_stack **stack_a);
+void	      pa(t_stack **stack_b, t_stack **stack_a, t_ctx **ctx);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				set_ranks(t_stack **stack);
 void				selection(t_stack **stack_a, t_stack **stack_b);
 void				radix(t_stack **a, t_stack **b);
 int         check_rank(t_stack **a);
 void        chunk_based(t_stack **a, t_stack **b);
+void        choose_algo(t_stack **a, t_stack **b, t_ctx **ctx);
 #endif

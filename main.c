@@ -19,6 +19,17 @@ void	ctx_init(t_ctx *ctx)
 	ctx->bench_enabled = 0;
 	ctx->flag_count = 0;
 	ctx->bench_count = 0;
+  ctx->pa_count = 0;
+  ctx->pb_count = 0;
+  ctx->ra_count = 0;
+  ctx->rb_count = 0;
+  ctx->rr_count = 0;
+  ctx->rra_count = 0;
+  ctx->rrb_count = 0;
+  ctx->rrr_count = 0;
+  ctx->sa_count = 0;
+  ctx->sb_count = 0;
+
 }
 
 #include <stdio.h>
@@ -49,7 +60,7 @@ int	main(int argc, char **argv)
 			lst_clear(&stack_a);
 		return(print_error());
 	}
-  choose_algo()
+  choose_algo(&stack_a, &stack_b, &ctx);
 
 
 

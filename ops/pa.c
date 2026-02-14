@@ -12,8 +12,9 @@
 
 #include "push_swap.h"
 
-void	pa(t_stack **stack_b, t_stack **stack_a)
+void	pa(t_stack **stack_b, t_stack **stack_a, t_ctx **ctx)
 {
   push(stack_b, stack_a);
+  (*ctx)->pa_count++;
   ft_printf("pa\n");
 }

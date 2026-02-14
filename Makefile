@@ -21,6 +21,7 @@ SRCS        = \
 			  checks_and_parsing/set_ranks.c \
 			  utils/compute_disorder.c \
 			  utils/check_rank.c \
+			  utils/choose_algo.c \
 			  ops/raw/swap.c \
 			  ops/raw/rotate.c \
 			  ops/raw/reverse_rotate.c \
@@ -38,6 +39,7 @@ SRCS        = \
 			  ops/rrr.c \
 			  sorts/selection.c \
 			  sorts/radix.c \
+			  sorts/chunk_based.c \
 
 OBJS        = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 DEPS		= $(OBJS:.o=.d)
