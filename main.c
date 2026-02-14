@@ -49,6 +49,18 @@ int	main(int argc, char **argv)
 			lst_clear(&stack_a);
 		return(print_error());
 	}
+  choose_algo()
+
+
+
+
+
+
+
+
+
+
+
 	node_a = stack_a->head;
 	while (node_a != stack_a->tail)
 	{

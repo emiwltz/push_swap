@@ -93,4 +93,6 @@ void				pb(t_stack **stack_a, t_stack **stack_b);
 void				set_ranks(t_stack **stack);
 void				selection(t_stack **stack_a, t_stack **stack_b);
 void				radix(t_stack **a, t_stack **b);
+int         check_rank(t_stack **a);
+void        chunk_based(t_stack **a, t_stack **b);
 #endif

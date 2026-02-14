@@ -20,6 +20,7 @@ SRCS        = \
 			  checks_and_parsing/lst_clear.c \
 			  checks_and_parsing/set_ranks.c \
 			  utils/compute_disorder.c \
+			  utils/check_rank.c \
 			  ops/raw/swap.c \
 			  ops/raw/rotate.c \
 			  ops/raw/reverse_rotate.c \
