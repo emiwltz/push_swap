@@ -22,6 +22,7 @@ SRCS        = \
 			  utils/compute_disorder.c \
 			  utils/check_rank.c \
 			  utils/choose_algo.c \
+			  utils/bench.c \
 			  ops/raw/swap.c \
 			  ops/raw/rotate.c \
 			  ops/raw/reverse_rotate.c \

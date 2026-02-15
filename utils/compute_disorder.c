@@ -10,10 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/includes/libft.h"
 #include "push_swap.h"
 #include <stddef.h>
 
-float	compute_disorder(t_stack *a)
+const char* disorder_percentage(t_stack **a)
+{
+  size_t  disorder;
+  disorder = compute_disorder(*a);
+  const char  *disorder_percentage;
+
+  disorder_percentage = ft_strjoin(ft_itoa(disorder / 100), ".");
+  disorder_percentage = ft_strjoin(disorder_percentage, ft_itoa(disorder % 100));
+  ft_printf("%s\n", disorder_percentage);
+  return (disorder_percentage);
+}
+
+size_t	compute_disorder(t_stack *a)
 {
 	size_t	mistakes;
 	size_t	total_pairs;
@@ -38,7 +51,5 @@ float	compute_disorder(t_stack *a)
 			mistakes++;
 		i = i->next;
 	}
-	ft_printf("\n--->\nmistakes: %d\n<---\n", mistakes);
-	ft_printf("\n--->\npairs: %d\n<---\n", total_pairs);
-	return ((float)mistakes / (float)total_pairs * 100);
+	return (mistakes * 10000 / total_pairs);
 }

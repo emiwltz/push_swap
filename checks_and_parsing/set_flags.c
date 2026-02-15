@@ -41,17 +41,17 @@ int	set_algo(char *flag, t_ctx *ctx)
 	return (0);
 }
 
-int	set_flags(char *str, t_ctx *ctx)
+int	set_flags(char *str, t_ctx **ctx)
 {
 	if (str[0] == '-' && str[1] == '-')
 	{
-		if (set_algo(str, ctx))
+		if (set_algo(str, *ctx))
 			return (1);
 	}
 	if (!ft_strcmp((const char *)str, "--bench"))
 	{
-		ctx->bench_enabled = 1;
-		ctx->bench_count += 1;
+		(*ctx)->bench_enabled = 1;
+		(*ctx)->bench_count += 1;
 		return (1);
 	}
 	return (0);
@@ -115,7 +115,7 @@ int	populate_stack_a(char *value, t_stack **stack_a)
 }
 
 // maybe size_t for i?
-int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
+int	first_check(char **argv, int argc, t_ctx **ctx, t_stack **stack_a)
 {
 	int	i;
 	int	numbers;
@@ -124,7 +124,7 @@ int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
 	numbers = 0;
 	while (i < argc)
 	{
-		if (set_flags(argv[i], &ctx))
+		if (set_flags(argv[i], ctx))
 		{
 			i++;
 			continue ;
@@ -139,7 +139,7 @@ int	first_check(char **argv, int argc, t_ctx ctx, t_stack **stack_a)
 		i++;
 		numbers++;
 	}
-	if (ctx.flag_count > 1 || ctx.bench_count > 1 || numbers < 1)
+	if ((*ctx)->flag_count > 1 || (*ctx)->bench_count > 1 || numbers < 1)
 		return (1);
 	return (0);
 }

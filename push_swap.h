@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/includes/libft.h"
+#include <stddef.h>
 
 # define ERR_MSG "Error\n"
 # define FLAG_BENCH "--bench"
@@ -68,16 +69,17 @@ typedef struct s_stack
 
 int					ft_strcmp(const char *str1, const char *str2);
 int					is_digit_string(char *s);
-int					first_check(char **argv, int argc, t_ctx ctx,
+int					first_check(char **argv, int argc, t_ctx **ctx,
 						t_stack **stack_a);
-int					set_flags(char *str, t_ctx *ctx);
+int					set_flags(char *str, t_ctx **ctx);
 int					arg_is_valid(char *s);
 int				print_error(void);
 int					is_valid_digit(char *s);
 char				**clean_flags(char **argv, int argc);
 long				ft_atol(const char *str);
 int					only_spaces(char *s);
-float				compute_disorder(t_stack *a);
+size_t				compute_disorder(t_stack *a);
+const char*   disorder_percentage(t_stack **a);
 int					set_algo(char *flag, t_ctx *ctx);
 int					check_double(t_stack **stack_a);
 t_stack				*lst_newstack(t_node *node);
@@ -107,4 +109,6 @@ void				radix(t_stack **a, t_stack **b, t_ctx *ctx);
 int         check_rank(t_stack **a);
 void        chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
 void        choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
+void        display_bench(t_ctx **ctx, t_stack **a);
+const char* disorder_percentage(t_stack **a);
 #endif

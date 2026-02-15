@@ -13,23 +13,23 @@
 #include "libft/includes/libft.h"
 #include "push_swap.h"
 
-void	ctx_init(t_ctx *ctx)
+void	ctx_init(t_ctx **ctx)
 {
-	ctx->algo = ALGO_UNSET;
-	ctx->bench_enabled = 0;
-	ctx->flag_count = 0;
-	ctx->bench_count = 0;
-	ctx->pa_count = 0;
-	ctx->pb_count = 0;
-	ctx->ra_count = 0;
-	ctx->rb_count = 0;
-	ctx->rr_count = 0;
-	ctx->rra_count = 0;
-	ctx->rrb_count = 0;
-	ctx->rrr_count = 0;
-	ctx->sa_count = 0;
-	ctx->sb_count = 0;
-	ctx->ss_count = 0;
+	(*ctx)->algo = ALGO_UNSET;
+	(*ctx)->bench_enabled = 0;
+	(*ctx)->flag_count = 0;
+	(*ctx)->bench_count = 0;
+	(*ctx)->pa_count = 0;
+	(*ctx)->pb_count = 0;
+	(*ctx)->ra_count = 0;
+	(*ctx)->rb_count = 0;
+	(*ctx)->rr_count = 0;
+	(*ctx)->rra_count = 0;
+	(*ctx)->rrb_count = 0;
+	(*ctx)->rrr_count = 0;
+	(*ctx)->sa_count = 0;
+	(*ctx)->sb_count = 0;
+	(*ctx)->ss_count = 0;
 
 }
 
@@ -43,18 +43,21 @@ int	main(int argc, char **argv)
 	t_node	*node_a;
 	t_node	*node_b;
 
+  (void)node_a;
+  (void)node_b;
+
 	stack_a = NULL;
 	stack_b = NULL;
 	ctx = malloc(sizeof(t_ctx));
 	if (!ctx)
 		return (0);
-	ctx_init(ctx);
+	ctx_init(&ctx);
 	if (argc < 2)
 	{
 		free(ctx);
 		return (0);
 	}
-	if (first_check(argv, argc, *ctx, &stack_a))
+	if (first_check(argv, argc, &ctx, &stack_a))
 	{
 		free(ctx);
 		if (stack_a)
@@ -72,38 +75,38 @@ int	main(int argc, char **argv)
 
 
 
-
-	node_a = stack_a->head;
-	while (node_a != stack_a->tail)
-	{
-		printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
-		node_a = node_a->next;
-	}
-	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
-	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_a->size);
-	printf("\n@@@@@@\ndisorder: %.2f%%\n@@@@@@\n", compute_disorder(stack_a));
-	if (stack_b)
-	{
-		node_b = stack_b->head;
-		while (node_b != stack_b->tail)
-		{
-			printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
-			node_b = node_b->next;
-		}
-		printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
-		printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_b->size);
-	}
-  
-	ft_printf("----------------apres--------------------");
-	radix(&stack_a, &stack_b, ctx);
-	node_a = stack_a->head;
-	while (node_a != stack_a->tail)
-	{
-		printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
-		node_a = node_a->next;
-	}
-	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
-
+	//
+	// node_a = stack_a->head;
+	// while (node_a != stack_a->tail)
+	// {
+	// 	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
+	// 	node_a = node_a->next;
+	// }
+	// printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
+	// printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_a->size);
+	// printf("\n@@@@@@\ndisorder: %zu%%\n@@@@@@\n", compute_disorder(stack_a));
+	// if (stack_b)
+	// {
+	// 	node_b = stack_b->head;
+	// 	while (node_b != stack_b->tail)
+	// 	{
+	// 		printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
+	// 		node_b = node_b->next;
+	// 	}
+	// 	printf("\n===\nnum:%d  (%zu)\n===\n", node_b->value, node_b->rank);
+	// 	printf("\n$$$$$\nsize:%zu\n$$$$$\n", stack_b->size);
+	// }
+	//
+	// ft_printf("----------------apres--------------------\n");
+	// radix(&stack_a, &stack_b, ctx);
+	// node_a = stack_a->head;
+	// while (node_a != stack_a->tail)
+	// {
+	// 	printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
+	// 	node_a = node_a->next;
+	// }
+	// printf("\n===\nnum:%d  (%zu)\n===\n", node_a->value, node_a->rank);
+	//
 	// sa(&stack_a, ctx);
 	// sb(&stack_b, ctx);
 	// ss(&stack_b, &stack_a, ctx);
@@ -115,7 +118,7 @@ int	main(int argc, char **argv)
 	// rrr(&stack_a, &stack_b, ctx);
 	// pa(&stack_b, &stack_a, ctx);
 	// pb(&stack_a, &stack_b, ctx);
-	// ft_printf("----------------apres--------------------");
+	// ft_printf("----------------apres--------------------\n");
 	// node_a = stack_a->head;
 	// while (node_a != stack_a->tail)
 	// {
