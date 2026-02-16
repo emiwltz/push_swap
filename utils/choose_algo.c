@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:35:00 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 11:51:15 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/16 13:07:55 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,8 @@ static void	run_adaptive(t_stack **a, t_stack **b, t_ctx *ctx, size_t disorder)
 
 void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 {
-	size_t	disorder;
-
-	disorder = compute_disorder(*a);
-	(*ctx)->di
-	if (!disorder)
+	ctx->disorder = compute_disorder(*a);
+	if (!ctx->disorder)
 	{
 		ft_printf("Nothing to do !\n");
 		return ;
@@ -42,8 +39,8 @@ void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 		chunk_based(a, b, ctx);
 	else if (ctx->algo == ALGO_COMPLEX)
 		radix(a, b, ctx);
-	else if (ctx->algo == ALGO_UNSET || ctx->algo == ALGO_ADAPTIVE)
-		run_adaptive(a, b, ctx, disorder);
+	else if (ctx->algo == ALGO_ADAPTIVE)
+		run_adaptive(a, b, ctx, ctx->disorder);
 	if (ctx->bench_enabled == 1)
 		display_bench(&ctx, a);
 }

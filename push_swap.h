@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 11:50:21 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/16 13:25:35 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/includes/libft.h"
-#include <stddef.h>
+# include <stddef.h>
 
 # define ERR_MSG "Error\n"
 # define FLAG_BENCH "--bench"
@@ -41,17 +41,17 @@ typedef struct s_ctx
 	int				flag_count;
 	int				bench_count;
 	int				disorder;
-  int       pa_count;
-  int       pb_count;
-  int       ra_count;
-  int       rb_count;
-  int       rr_count;
-  int       rra_count;
-  int       rrb_count;
-  int       rrr_count;
-  int       sa_count;
-  int       sb_count;
-  int       ss_count;
+	int				pa_count;
+	int				pb_count;
+	int				ra_count;
+	int				rb_count;
+	int				rr_count;
+	int				rra_count;
+	int				rrb_count;
+	int				rrr_count;
+	int				sa_count;
+	int				sb_count;
+	int				ss_count;
 }					t_ctx;
 
 typedef struct s_node
@@ -74,13 +74,13 @@ int					first_check(char **argv, int argc, t_ctx **ctx,
 						t_stack **stack_a);
 int					set_flags(char *str, t_ctx **ctx);
 int					arg_is_valid(char *s);
-int				print_error(void);
+int					print_error(void);
 int					is_valid_digit(char *s);
 char				**clean_flags(char **argv, int argc);
 long				ft_atol(const char *str);
 int					only_spaces(char *s);
 size_t				compute_disorder(t_stack *a);
-const char*   disorder_percentage(t_stack **a);
+const char			*disorder_percentage(t_stack **a);
 int					set_algo(char *flag, t_ctx *ctx);
 int					check_double(t_stack **stack_a);
 t_stack				*lst_newstack(t_node *node);
@@ -107,9 +107,9 @@ void				pb(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx);
 void				set_ranks(t_stack **stack);
 void				selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx);
 void				radix(t_stack **a, t_stack **b, t_ctx *ctx);
-int         check_rank(t_stack **a);
-void        chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
-void        choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
-void        display_bench(t_ctx **ctx, t_stack **a);
-const char* disorder_percentage(t_stack **a);
+int					check_rank(t_stack **a);
+void				chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
+void				choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
+void				display_bench(t_ctx **ctx, t_stack **a);
+const char			*disorder_percentage(t_stack **a);
 #endif
