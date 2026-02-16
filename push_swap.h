@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 13:25:35 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/16 13:54:46 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ char				**clean_flags(char **argv, int argc);
 long				ft_atol(const char *str);
 int					only_spaces(char *s);
 size_t				compute_disorder(t_stack *a);
-const char			*disorder_percentage(t_stack **a);
 int					set_algo(char *flag, t_ctx *ctx);
 int					check_double(t_stack **stack_a);
 t_stack				*lst_newstack(t_node *node);
@@ -111,5 +110,5 @@ int					check_rank(t_stack **a);
 void				chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
 void				choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
 void				display_bench(t_ctx **ctx, t_stack **a);
-const char			*disorder_percentage(t_stack **a);
+const char			*disorder_percentage(t_ctx ctx);
 #endif

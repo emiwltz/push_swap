@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/16 11:49:34 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/16 14:09:17 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,14 @@
 #include <stddef.h>
 #include <stdio.h>
 
-const char* disorder_percentage(t_stack **a)
+const char* disorder_percentage(t_ctx ctx)
 {
   size_t  disorder;
-  disorder = compute_disorder(*a);
+  disorder = ctx.disorder;
   const char  *disorder_percentage;
 
   disorder_percentage = ft_strjoin(ft_itoa(disorder / 100), ".");
   disorder_percentage = ft_strjoin(disorder_percentage, ft_itoa(disorder % 100));
-  ft_printf("%s\n", disorder_percentage);
   return (disorder_percentage);
 }
 
