@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/10 17:32:05 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/16 11:50:21 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct s_ctx
 	t_algo			algo;
 	int				flag_count;
 	int				bench_count;
+	int				disorder;
   int       pa_count;
   int       pb_count;
   int       ra_count;

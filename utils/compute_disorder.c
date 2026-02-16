@@ -6,13 +6,14 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/05 22:39:34 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/16 11:49:34 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/includes/libft.h"
 #include "push_swap.h"
 #include <stddef.h>
+#include <stdio.h>
 
 const char* disorder_percentage(t_stack **a)
 {
