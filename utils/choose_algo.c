@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:35:00 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 13:07:55 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/17 13:36:51 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 		ft_printf("Nothing to do !\n");
 		return ;
 	}
-	ft_printf("--------------------------------------------------\n");
 	if (ctx->algo == ALGO_SIMPLE)
 		selection(a, b, ctx);
 	else if (ctx->algo == ALGO_MEDIUM)
