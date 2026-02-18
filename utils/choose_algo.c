@@ -25,8 +25,12 @@ static void	run_adaptive(t_stack **a, t_stack **b, t_ctx *ctx, size_t disorder)
 void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 {
 	ctx->disorder = compute_disorder(*a);
-	if (!ctx->disorder)
+	if (check_rank(a))
+	{
+		if (ctx->bench_enabled == 1)
+			display_bench(&ctx, a);
 		return ;
+	}
 	if (ctx->algo == ALGO_SIMPLE)
 		selection(a, b, ctx);
 	else if (ctx->algo == ALGO_MEDIUM)

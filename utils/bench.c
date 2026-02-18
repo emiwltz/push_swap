@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:02:50 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 14:26:36 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/18 16:46:33 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft/includes/libft.h"
 #include "push_swap.h"
 
-static char	*disp_algo(t_ctx **ctx)
+char	*disp_algo(t_ctx **ctx)
 {
 	if ((*ctx)->algo == ALGO_SIMPLE)
 		return ("Simple (O(n^2))");
@@ -27,7 +27,7 @@ static char	*disp_algo(t_ctx **ctx)
 	return ("Unset");
 }
 
-static int	total_ops(t_ctx **ctx)
+int	total_ops(t_ctx **ctx)
 {
 	int	total_ops;
 
@@ -38,7 +38,7 @@ static int	total_ops(t_ctx **ctx)
 	return (total_ops);
 }
 
-static void	print_disorder(t_ctx **ctx)
+void	print_disorder(t_ctx **ctx)
 {
 	int	disorder;
 
@@ -49,7 +49,7 @@ static void	print_disorder(t_ctx **ctx)
 	ft_printf("%i%%\n", disorder % 100);
 }
 
-static void	print_ops_table(t_ctx **ctx)
+void	print_ops_table(t_ctx **ctx)
 {
 	ft_printf("		+-----+\n");
 	ft_printf("		| OPS |\n");
@@ -62,19 +62,6 @@ static void	print_ops_table(t_ctx **ctx)
 	ft_printf("| swap       : sa=%i  sb=%i  ss=%i\n", (*ctx)->sa_count,
 		(*ctx)->sb_count, (*ctx)->ss_count);
 }
-
-/*
-** Backup old version:
-** void	display_bench(t_ctx **ctx, t_stack **a)
-** {
-** 	(void)a;
-** 	ft_printf("--------------[BENCH]------------\n");
-** 	ft_printf("DISORDER: %s%%\n", disorder_percentage(**ctx));
-** 	ft_printf("ALGO -> %s\n", disp_algo(ctx));
-** 	ft_printf("TOTAL_OPS -> %i\n", total_ops(ctx));
-** 	print_ops(ctx);
-** }
-*/
 
 void	display_bench(t_ctx **ctx, t_stack **a)
 {

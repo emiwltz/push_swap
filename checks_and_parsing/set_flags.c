@@ -139,7 +139,7 @@ int	first_check(char **argv, int argc, t_ctx **ctx, t_stack **stack_a)
 		i++;
 		numbers++;
 	}
-	if ((*ctx)->flag_count > 1 || (*ctx)->bench_count > 1 || numbers <= 1)
+	if ((*ctx)->flag_count > 1 || (*ctx)->bench_count > 1 || numbers <= 0)
 		return (1);
 	return (0);
 }

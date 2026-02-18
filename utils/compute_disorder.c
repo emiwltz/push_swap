@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/16 14:09:17 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/18 11:01:21 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ const char* disorder_percentage(t_ctx ctx)
 
 size_t	compute_disorder(t_stack *a)
 {
+	size_t	disorder;
 	size_t	mistakes;
 	size_t	total_pairs;
 	t_node	*i;
 	t_node	*j;
 
+	if (!a || !a->head || a->size < 2)
+		return (0);
 	i = a->head;
 	mistakes = 0;
 	total_pairs = 0;
@@ -51,5 +54,8 @@ size_t	compute_disorder(t_stack *a)
 			mistakes++;
 		i = i->next;
 	}
-	return (mistakes * 10000 / total_pairs);
+	disorder = mistakes * 10000 / total_pairs;
+	if (mistakes > 0 && disorder == 0)
+		disorder = 1;
+	return (disorder);
 }
