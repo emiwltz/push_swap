@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:35:00 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/17 13:36:51 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/18 10:40:28 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 static void	run_adaptive(t_stack **a, t_stack **b, t_ctx *ctx, size_t disorder)
 {
-	ft_printf("%zu\n", disorder);
-	ft_printf("--------------------------------------------------\n");
 	if (disorder < 2000)
 		selection(a, b, ctx);
 	else if (disorder <= 5000)
@@ -28,10 +26,7 @@ void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 {
 	ctx->disorder = compute_disorder(*a);
 	if (!ctx->disorder)
-	{
-		ft_printf("Nothing to do !\n");
 		return ;
-	}
 	if (ctx->algo == ALGO_SIMPLE)
 		selection(a, b, ctx);
 	else if (ctx->algo == ALGO_MEDIUM)
