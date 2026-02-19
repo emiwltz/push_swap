@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/16 13:54:46 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:21:46 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ typedef struct s_stack
 
 int					ft_strcmp(const char *str1, const char *str2);
 int					is_digit_string(char *s);
-int					first_check(char **argv, int argc, t_ctx **ctx,
+int					iterate_args(char **argv, int argc, t_ctx **ctx,
 						t_stack **stack_a);
 int					set_flags(char *str, t_ctx **ctx);
 int					arg_is_valid(char *s);
@@ -111,4 +111,6 @@ void				chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
 void				choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
 void				display_bench(t_ctx **ctx, t_stack **a);
 const char			*disorder_percentage(t_ctx ctx);
+int					populate_stack(char *value, t_stack **stack);
+
 #endif

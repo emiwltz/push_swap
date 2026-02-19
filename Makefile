@@ -7,7 +7,7 @@ SRCS        = \
               main.c\
 			  utils/ft_strcmp.c\
 			  checks_and_parsing/check_args.c\
-			  checks_and_parsing/set_flags.c\
+			  checks_and_parsing/iterate_args.c\
 			  utils/check_string.c\
 			  utils/print_error.c\
 			  checks_and_parsing/check_double.c \
@@ -19,6 +19,7 @@ SRCS        = \
 			  checks_and_parsing/lst_newstack.c \
 			  checks_and_parsing/lst_clear.c \
 			  checks_and_parsing/set_ranks.c \
+			  checks_and_parsing/populate_stack.c \
 			  utils/compute_disorder.c \
 			  utils/check_rank.c \
 			  utils/choose_algo.c \

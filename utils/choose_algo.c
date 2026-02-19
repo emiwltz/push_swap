@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:35:00 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 12:57:42 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:17:51 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 static void	run_adaptive(t_stack **a, t_stack **b, t_ctx *ctx, size_t disorder)
 {
-  if (disorder < 2000)
-  {
-	selection(a, b, ctx);
-	(*ctx).algo = ALGO_SIMPLE;
-  }
-  else if (disorder <= 5000)
-  {
-	chunk_based(a, b, ctx);
-	(*ctx).algo = ALGO_MEDIUM;
-  }
-  else
-  {
-	radix(a, b, ctx);
-	(*ctx).algo = ALGO_COMPLEX;
-  }
+	if (disorder < 2000)
+	{
+		selection(a, b, ctx);
+		(*ctx).algo = ALGO_SIMPLE;
+	}
+	else if (disorder <= 5000)
+	{
+		chunk_based(a, b, ctx);
+		(*ctx).algo = ALGO_MEDIUM;
+	}
+	else
+	{
+		radix(a, b, ctx);
+		(*ctx).algo = ALGO_COMPLEX;
+	}
 }
 
 void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)

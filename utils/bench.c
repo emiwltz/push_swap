@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:02:50 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 12:58:14 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:17:43 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft/includes/libft.h"
 #include "push_swap.h"

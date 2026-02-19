@@ -6,11 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 13:18:47 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 12:01:26 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:17:26 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
 
+#include "push_swap.h"
 
 static size_t	get_sqrt(size_t size)
 {
@@ -23,7 +23,6 @@ static size_t	get_sqrt(size_t size)
 		sqrt++;
 	return (sqrt);
 }
-
 
 static void	push_a_to_b(t_stack **a, t_stack **b, t_ctx *ctx, size_t chunk)
 {
@@ -53,58 +52,58 @@ static void	push_a_to_b(t_stack **a, t_stack **b, t_ctx *ctx, size_t chunk)
 
 static size_t	get_pos(t_stack **b)
 {
-  size_t	pos;
-  size_t	max;
-  t_node	*node;
+	size_t	pos;
+	size_t	max;
+	t_node	*node;
 
-  pos = 0;
-  max = 0;
-  node = (*b)->head;
-  while (node != (*b)->tail)
-  {
+	pos = 0;
+	max = 0;
+	node = (*b)->head;
+	while (node != (*b)->tail)
+	{
+		if (node->rank > max)
+			max = node->rank;
+		node = node->next;
+	}
 	if (node->rank > max)
-	  max = node->rank;
-	node = node->next;
-  }
-  if (node->rank > max)
-	  max = node->rank;
-  node = (*b)->head;
-  while (node->rank != max)
-  {
-	pos++;
-	node = node->next;
-  }
-  return (pos);
+		max = node->rank;
+	node = (*b)->head;
+	while (node->rank != max)
+	{
+		pos++;
+		node = node->next;
+	}
+	return (pos);
 }
 
-static	void	push_b_to_a(t_stack **a, t_stack **b, t_ctx *ctx, size_t pos)
+static void	push_b_to_a(t_stack **a, t_stack **b, t_ctx *ctx, size_t pos)
 {
-  if (!b || !a)
-	return ;
-  if (pos < ((*b)->size / 2))
-  {
-	while ((*b) && (*b)->head->rank != (*b)->size)
-	  rb(b, ctx);
-	pa(b, a, ctx);
-  }
-  else
-  {
-	while ((*b) && (*b)->head->rank != (*b)->size)
-	  rrb(b, ctx);
-	pa(b, a, ctx);
-  }
+	if (!b || !a)
+		return ;
+	if (pos < ((*b)->size / 2))
+	{
+		while ((*b) && (*b)->head->rank != (*b)->size)
+			rb(b, ctx);
+		pa(b, a, ctx);
+	}
+	else
+	{
+		while ((*b) && (*b)->head->rank != (*b)->size)
+			rrb(b, ctx);
+		pa(b, a, ctx);
+	}
 }
 
 void	chunk_based(t_stack **a, t_stack **b, t_ctx *ctx)
 {
-  size_t	chunk_size;
+	size_t	chunk_size;
 
-  if (!a || !(*a) || (*a)->size < 2)
-	return ;
-  chunk_size = get_sqrt((*a)->size);
-  push_a_to_b(a, b, ctx, chunk_size);
-  while (*b && (*b)->size > 0)
-  {
-	push_b_to_a(a, b, ctx, get_pos(b));
-  }
+	if (!a || !(*a) || (*a)->size < 2)
+		return ;
+	chunk_size = get_sqrt((*a)->size);
+	push_a_to_b(a, b, ctx, chunk_size);
+	while (*b && (*b)->size > 0)
+	{
+		push_b_to_a(a, b, ctx, get_pos(b));
+	}
 }

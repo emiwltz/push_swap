@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 11:09:32 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/10 13:21:57 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:18:08 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	print_error(void)
 {
-  write(2, "Error\n", 6);
-  return (1);
+	write(2, "Error\n", 6);
+	return (1);
 }

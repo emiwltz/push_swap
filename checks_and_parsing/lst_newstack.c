@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 13:51:17 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/08 16:48:52 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 13:03:26 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack	*lst_newstack(t_node *node)
 {
-	t_stack *res;
+	t_stack	*res;
 
 	res = malloc(sizeof(t_stack));
 	if (!res)

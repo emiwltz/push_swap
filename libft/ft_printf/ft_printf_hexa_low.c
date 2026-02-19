@@ -1,13 +1,13 @@
 /* ************************************************************************** */
-/*																			  */
-/*														  :::	   ::::::::   */
-/*	 ft_printf_hexa_low.c								:+:		 :+:	:+:   */
-/*													  +:+ +:+		  +:+	  */
-/*	 By: ewaltz <ewaltz@student.42.fr>				+#+  +:+	   +#+		  */
-/*												  +#+#+#+#+#+	+#+			  */
-/*	 Created: 2025/12/02 16:52:28 by ewaltz			   #+#	  #+#			  */
-/*	 Updated: 2025/12/04 11:26:48 by ewaltz			  ###	########.fr		  */
-/*																			  */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_hexa_low.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/19 13:14:09 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/19 13:14:10 by alemyre          ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
@@ -29,7 +29,7 @@ int	ft_putnbr_base_low(unsigned long nbr)
 	else
 	{
 		c = base[nbr];
-		count += write (1, &c, 1);
+		count += write(1, &c, 1);
 	}
 	return (count);
 }
