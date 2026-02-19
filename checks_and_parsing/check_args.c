@@ -6,23 +6,31 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:25:55 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 13:01:36 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 16:21:55 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <limits.h>
 
+char** arg_is_valid_helper(char *s)
+{
+  char** numbers;
+
+  if (only_spaces(s))
+	return (0);
+  numbers = ft_split((const char *)s, ' ');
+  if (!numbers)
+	return (0);
+  return (numbers);
+}
+
 int	arg_is_valid(char *s)
 {
 	size_t	i;
 	char	**numbers;
 
-	if (only_spaces(s))
-		return (0);
-	numbers = ft_split((const char *)s, ' ');
-	if (!numbers)
-		return (0);
+	numbers = arg_is_valid_helper(s);
 	i = 0;
 	while (numbers[i])
 	{

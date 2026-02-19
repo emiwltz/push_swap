@@ -6,14 +6,13 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 13:17:54 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 16:46:24 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/includes/libft.h"
 #include "push_swap.h"
 #include <stddef.h>
-#include <stdio.h>
 
 const char	*disorder_percentage(t_ctx ctx)
 {
@@ -27,36 +26,45 @@ const char	*disorder_percentage(t_ctx ctx)
 	return (disorder_percentage);
 }
 
-size_t	compute_disorder(t_stack *a)
+static size_t	count_disorder_pairs(t_node *head, t_node *tail,
+		size_t *total_pairs)
 {
-	size_t	disorder;
 	size_t	mistakes;
-	size_t	total_pairs;
 	t_node	*i;
 	t_node	*j;
 
-	if (!a || !a->head || a->size < 2)
-		return (0);
-	i = a->head;
 	mistakes = 0;
-	total_pairs = 0;
-	while (i != a->tail)
+	i = head;
+	while (i != tail)
 	{
 		j = i->next;
-		while (j != a->tail)
+		while (j != tail)
 		{
-			total_pairs++;
+			(*total_pairs)++;
 			if (i->value > j->value)
 				mistakes++;
 			j = j->next;
 		}
-		total_pairs++;
+		(*total_pairs)++;
 		if (i->value > j->value)
 			mistakes++;
 		i = i->next;
 	}
+	return (mistakes);
+}
+
+size_t	compute_disorder(t_stack *a)
+{
+	size_t	mistakes;
+	size_t	disorder;
+	size_t	total_pairs;
+
+	if (!a || !a->head || a->size < 2)
+		return (0);
+	total_pairs = 0;
+	mistakes = count_disorder_pairs(a->head, a->tail, &total_pairs);
 	disorder = mistakes * 10000 / total_pairs;
 	if (mistakes > 0 && disorder == 0)
 		disorder = 1;
-	return (disorder);
+	return (mistakes * 1000 / total_pairs);
 }

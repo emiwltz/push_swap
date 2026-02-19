@@ -38,32 +38,51 @@ t_stack	*initialize_stack(t_node *node)
 	return (res);
 }
 
-int	populate_stack(char *value, t_stack **stack)
+static int	add_number_to_stack(char *number, t_stack **stack)
+{
+	t_node	*node;
+
+	if (!is_valid_digit(number))
+		return (0);
+	node = lst_newnode(number);
+	if (!node)
+		return (0);
+	if (*stack)
+	{
+		lst_addnodeback(node, stack);
+		return (1);
+	}
+	*stack = initialize_stack(node);
+	if (!(*stack))
+	{
+		free(node);
+		return (0);
+	}
+	return (1);
+}
+
+static int	fill_stack_from_split(char **numbers, t_stack **stack)
 {
 	size_t	i;
+
+	i = 0;
+	while (numbers[i])
+	{
+		if (!add_number_to_stack(numbers[i], stack))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	populate_stack(char *value, t_stack **stack)
+{
 	char	**numbers;
-	t_node	*node;
 
 	numbers = ft_split((const char *)value, ' ');
 	if (!numbers)
 		return (0);
-	i = 0;
-	while (numbers[i])
-	{
-		if (is_valid_digit(numbers[i]))
-		{
-			if (!(node = lst_newnode(numbers[i])))
-				return (clear_split(numbers));
-			if (*stack)
-				lst_addnodeback(node, stack);
-			else if (!(*stack = initialize_stack(node)))
-				return (clear_split(numbers));
-		}
-		else
-			return (clear_split(numbers));
-		i++;
-	}
-	if (!check_double(stack))
+	if (!fill_stack_from_split(numbers, stack) || !check_double(stack))
 		return (clear_split(numbers));
 	clear_split(numbers);
 	return (1);
