@@ -5,14 +5,9 @@ CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3 -I.
 
 SRCS        = \
               main.c\
-			  utils/ft_strcmp.c\
 			  checks_and_parsing/check_args.c\
 			  checks_and_parsing/iterate_args.c\
-			  utils/check_string.c\
-			  utils/print_error.c\
 			  checks_and_parsing/check_double.c \
-			  utils/ft_atol.c \
-			  utils/only_spaces.c \
 			  checks_and_parsing/lst_addnodeback.c \
 			  checks_and_parsing/lst_addnodefront.c \
 			  checks_and_parsing/lst_newnode.c \
@@ -20,8 +15,13 @@ SRCS        = \
 			  checks_and_parsing/lst_clear.c \
 			  checks_and_parsing/set_ranks.c \
 			  checks_and_parsing/populate_stack.c \
+			  utils/ft_strcmp.c\
+			  utils/check_string.c\
+			  utils/print_error.c\
+			  utils/ft_atol.c \
+			  utils/only_spaces.c \
 			  utils/compute_disorder.c \
-			  utils/check_rank.c \
+			  utils/check_order.c \
 			  utils/choose_algo.c \
 			  utils/bench.c \
 			  ops/raw/swap.c \

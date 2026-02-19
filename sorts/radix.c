@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:30:08 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 13:17:34 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 16:44:51 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	radix(t_stack **a, t_stack **b, t_ctx *ctx)
 	if (!a || !(*a) || (*a)->size < 2)
 		return ;
 	index_bit = 0;
-	while (!check_rank(a))
+	while (!check_order(a))
 	{
 		stack_size = (*a)->size;
 		i = 0;

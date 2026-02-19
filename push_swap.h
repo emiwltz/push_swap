@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 13:21:46 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 16:44:51 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void				pb(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx);
 void				set_ranks(t_stack **stack);
 void				selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx);
 void				radix(t_stack **a, t_stack **b, t_ctx *ctx);
-int					check_rank(t_stack **a);
+int					check_order(t_stack **a);
 void				chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
 void				choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
 void				display_bench(t_ctx **ctx, t_stack **a);
