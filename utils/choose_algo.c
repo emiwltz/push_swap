@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:35:00 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 15:57:27 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 17:11:53 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	run_adaptive(t_stack **a, t_stack **b, t_ctx *ctx, size_t disorder)
 void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 {
 	ctx->disorder = compute_disorder(*a);
-	if (check_rank(a))
+	if (check_order(a))
 	{
 		if (ctx->bench_enabled == 1)
 			display_bench(&ctx, a);
