@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 13:38:28 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/08 14:29:16 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 12:01:09 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_node	*lst_newnode(char *value)
 	res = malloc(sizeof(t_node));
 	if (!res)
 		return (NULL);
-	res->value = atoi(value);
+	res->value = ft_atoi(value);
 	res->rank = 1;
 	res->next = NULL;
 	return (res);

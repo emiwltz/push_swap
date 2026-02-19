@@ -6,12 +6,11 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 13:18:47 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 11:34:43 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/19 12:01:26 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
-#include <stddef.h>
+
 
 static size_t	get_sqrt(size_t size)
 {
@@ -51,8 +50,6 @@ static void	push_a_to_b(t_stack **a, t_stack **b, t_ctx *ctx, size_t chunk)
 			ra(a, ctx);
 	}
 }
-
-#include <stdio.h>
 
 static size_t	get_pos(t_stack **b)
 {
