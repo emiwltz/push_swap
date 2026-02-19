@@ -6,12 +6,27 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 21:15:24 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 13:17:39 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 16:33:12 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 #include <stdio.h>
+
+static int	next_in_first_half(t_stack *stack, size_t pos)
+{
+	size_t	count;
+
+	count = 0;
+	while (stack->head->rank != pos)
+	{
+		count++;
+		stack->head = stack->head->next;
+	}
+	if (count >= stack->size / 2)
+		return (0);
+	return (1);
+}
 
 void	selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 {
@@ -26,7 +41,10 @@ void	selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 			pos++;
 			continue ;
 		}
-		ra(stack_a, ctx);
+		if (next_in_first_half(*stack_a, pos))
+			ra(stack_a, ctx);
+		else
+			rra(stack_a, ctx);
 	}
 	while ((*stack_b))
 	{

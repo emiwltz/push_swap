@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 13:18:19 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/19 13:24:47 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 		free(ctx);
 		return (0);
 	}
-	if (iterate_args(argv, argc, &ctx, &stack_a))
+	if (!iterate_args(argv, argc, &ctx, &stack_a))
 	{
 		free(ctx);
 		if (stack_a)
