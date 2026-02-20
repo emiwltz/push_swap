@@ -14,6 +14,7 @@ SRCS        = \
 			  utils/check_order.c \
 			  utils/choose_algo.c \
 			  utils/bench.c \
+			  utils/search_next.c \
 			  checks_and_parsing/check_args.c\
 			  checks_and_parsing/iterate_args.c\
 			  checks_and_parsing/check_double.c \

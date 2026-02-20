@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   selection.c                                        :+:      :+:    :+:   */
+/*   search_next.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 21:15:24 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 17:53:30 by alemyre          ###   ########.fr       */
+/*   Created: 2026/02/19 17:53:15 by alemyre           #+#    #+#             */
+/*   Updated: 2026/02/19 17:53:46 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
+int	next_in_first_half(t_stack *stack, size_t pos)
 {
-	size_t	pos;
+	size_t	count;
 
-	pos = 1;
-	while ((*stack_a))
+	count = 0;
+	while (stack->head->rank != pos)
 	{
-		if ((*stack_a)->head->rank == pos)
-		{
-			pb(stack_a, stack_b, ctx);
-			pos++;
-			continue ;
-		}
-		if (next_in_first_half(*stack_a, pos))
-			ra(stack_a, ctx);
-		else
-			rra(stack_a, ctx);
+		count++;
+		stack->head = stack->head->next;
 	}
-	while ((*stack_b))
-	{
-		pa(stack_b, stack_a, ctx);
-	}
+	if (count >= stack->size / 2)
+		return (0);
+	return (1);
 }
