@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 17:53:15 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 17:53:46 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/20 12:58:11 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 int	next_in_first_half(t_stack *stack, size_t pos)
 {
 	size_t	count;
+	t_node	*temp;
 
 	count = 0;
-	while (stack->head->rank != pos)
+	temp = stack->head;
+	while (temp->rank != pos)
 	{
 		count++;
-		stack->head = stack->head->next;
+		temp = temp->next;
 	}
-	if (count >= stack->size / 2)
+	if (count > (stack->size / 2))
 		return (0);
 	return (1);
 }

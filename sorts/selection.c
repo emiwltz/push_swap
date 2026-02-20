@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 21:15:24 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 17:53:30 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/20 12:59:25 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ void	selection(t_stack **stack_a, t_stack **stack_b, t_ctx *ctx)
 			rra(stack_a, ctx);
 	}
 	while ((*stack_b))
-	{
 		pa(stack_b, stack_a, ctx);
-	}
 }

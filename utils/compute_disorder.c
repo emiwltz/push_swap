@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:49:23 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 16:46:24 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/20 12:10:00 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ size_t	compute_disorder(t_stack *a)
 	disorder = mistakes * 10000 / total_pairs;
 	if (mistakes > 0 && disorder == 0)
 		disorder = 1;
-	return (mistakes * 1000 / total_pairs);
+	return (mistakes * 10000 / total_pairs);
 }

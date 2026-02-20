@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 13:18:47 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/20 01:40:01 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/20 12:42:19 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,33 +28,30 @@ static size_t	get_sqrt(size_t size)
 static void	push_a_to_b(t_stack **a, t_stack **b, t_ctx *ctx, size_t chunk)
 {
 	size_t	pushed;
-	size_t	low;
-	size_t	high;
 	size_t	rank;
-	size_t	count;
 
 	pushed = 0;
-	while (*a && (*a)->head)
+	while (*a && (*a)->size > 0)
 	{
-		high = pushed + chunk;
-		low = pushed;
-		count = 0;
-		while (*a && (*a)->head && count != chunk)
+		rank = (*a)->head->rank;
+		if (rank <= pushed + 1)
 		{
-			rank = (*a)->head->rank;
-			if (rank > low && rank <= high)
-			{
-				pb(a, b, ctx);
-				count++;
-				pushed++;
-			}
-			else
-				ra(a, ctx);
+			pb(a, b, ctx);
+			if (*b && (*b)->size > 1)
+				rb(b, ctx);
+			pushed++;
 		}
+		else if (rank <= pushed + chunk)
+		{
+			pb(a, b, ctx);
+			pushed++;
+		}
+		else
+			ra(a, ctx);
 	}
 }
 
-static size_t	get_pos(t_stack **b)
+static size_t	get_pos(t_stack *b)
 {
 	size_t	pos;
 	size_t	max;
@@ -62,8 +59,8 @@ static size_t	get_pos(t_stack **b)
 
 	pos = 0;
 	max = 0;
-	node = (*b)->head;
-	while (node != (*b)->tail)
+	node = b->head;
+	while (node != b->tail)
 	{
 		if (node->rank > max)
 			max = node->rank;
@@ -71,7 +68,7 @@ static size_t	get_pos(t_stack **b)
 	}
 	if (node->rank > max)
 		max = node->rank;
-	node = (*b)->head;
+	node = b->head;
 	while (node->rank != max)
 	{
 		pos++;
@@ -108,6 +105,6 @@ void	chunk_based(t_stack **a, t_stack **b, t_ctx *ctx)
 	push_a_to_b(a, b, ctx, chunk_size);
 	while (*b && (*b)->head)
 	{
-		push_b_to_a(a, b, ctx, get_pos(b));
+		push_b_to_a(a, b, ctx, get_pos(*b));
 	}
 }
