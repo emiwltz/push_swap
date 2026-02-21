@@ -1,7 +1,7 @@
 NAME        = push_swap
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -MMD -MP -g3 -I.
+CFLAGS      = -Wall -Wextra -Werror -MMD -MP -I.
 
 SRCS        = \
               main.c\
