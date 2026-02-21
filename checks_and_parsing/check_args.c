@@ -31,10 +31,12 @@ int	arg_is_valid(char *s)
 	char	**numbers;
 
 	numbers = arg_is_valid_helper(s);
+	if (!numbers)
+		return (0);
 	i = 0;
 	while (numbers[i])
 	{
-		if (!is_digit_string(numbers[i]) || only_spaces(s)
+		if (!is_digit_string(numbers[i])
 			|| (ft_atol(numbers[i]) > INT_MAX || ft_atol(numbers[i]) < INT_MIN))
 		{
 			i = -1;

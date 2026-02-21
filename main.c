@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	ctx = malloc(sizeof(t_ctx));
 	if (!ctx)
-		return (0);
+		return (print_error());
 	ctx_init(&ctx);
 	if (argc < 2)
 	{
