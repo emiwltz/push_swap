@@ -18,6 +18,10 @@ int	is_digit_string(char *s)
 	int	i;
 
 	i = 0;
+	if ((s[0] == '-' && ft_strlen(s) > 11) || ft_strlen(s) > 10)
+		return (0);
+	else if ((ft_strlen(s) == 10 && ft_strcmp(s, "2147483647") > 0) || (ft_strlen(s) == 11 && ft_strcmp(s, "-2147483648") > 0))
+		return (0);
 	while (s[i])
 	{
 		if (!ft_isdigit(s[i]) && s[i] != '-' && s[i] != ' ')
