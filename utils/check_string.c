@@ -12,14 +12,31 @@
 
 #include "push_swap.h"
 
+static int	check_int_range(char *s)
+{
+	if (s[0] == '-')
+	{
+		if (ft_strlen(s) > 11)
+			return (0);
+		if (ft_strlen(s) == 11 && ft_strcmp(s, "-2147483648") > 0)
+			return (0);
+	}
+	else
+	{
+		if (ft_strlen(s) > 10)
+			return (0);
+		if (ft_strlen(s) == 10 && ft_strcmp(s, "2147483647") > 0)
+			return (0);
+	}
+	return (1);
+}
+
 int	is_digit_string(char *s)
 {
 	int	i;
 
 	i = 0;
-	if ((s[0] == '-' && ft_strlen(s) > 11) || ft_strlen(s) > 10)
-		return (0);
-	else if ((ft_strlen(s) == 10 && ft_strcmp(s, "2147483647") > 0) || (ft_strlen(s) == 11 && ft_strcmp(s, "-2147483648") > 0))
+	if (!check_int_range(s))
 		return (0);
 	while (s[i])
 	{

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 static void	emptying_stack(t_stack **stack_from, t_stack **stack_to)
 {

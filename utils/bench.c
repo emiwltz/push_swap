@@ -20,6 +20,8 @@ char	*disp_algo(t_ctx **ctx)
 		return ("Medium (O(n*sqrt(n)))");
 	else if ((*ctx)->algo == ALGO_COMPLEX)
 		return ("Complex (O(n log n))");
+	else if ((*ctx)->algo == ALGO_ADAPTIVE)
+		return ("Adaptive");
 	return ("Unset");
 }
 
