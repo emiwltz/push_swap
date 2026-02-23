@@ -6,3 +6,9 @@ push_swap
 libft.a
 compile_commands.json
 CLAUDE.md
+op
+x
+bench
+bench.txt
+args.txt
+checker_linux

@@ -6,11 +6,10 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:29:01 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 13:17:47 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/23 16:33:28 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 int	is_digit_string(char *s)

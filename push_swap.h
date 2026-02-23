@@ -6,7 +6,7 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:23:29 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 17:54:14 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/23 11:35:26 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,6 @@ int					check_order(t_stack **a);
 void				chunk_based(t_stack **a, t_stack **b, t_ctx *ctx);
 void				choose_algo(t_stack **a, t_stack **b, t_ctx *ctx);
 void				display_bench(t_ctx **ctx, t_stack **a);
-const char			*disorder_percentage(t_ctx ctx);
 int					populate_stack(char *value, t_stack **stack);
 int					next_in_first_half(t_stack *stack, size_t pos);
 

@@ -6,11 +6,10 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:13:09 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/21 13:37:48 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/23 16:33:37 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 void	ctx_init(t_ctx **ctx)

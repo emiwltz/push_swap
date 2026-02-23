@@ -6,11 +6,10 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 13:18:04 by alemyre           #+#    #+#             */
-/*   Updated: 2026/02/19 13:18:05 by alemyre          ###   ########.fr       */
+/*   Updated: 2026/02/23 16:33:32 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 int	only_spaces(char *s)

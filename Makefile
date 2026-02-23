@@ -67,6 +67,11 @@ clean:
 	make -C $(LIBFT)/ clean
 	rm -f $(OBJS) $(DEPS)
 	rm -rf $(BUILD_DIR)
+	rm -f op
+	rm -f x
+	rm -f bench
+	rm -f bench.txt
+	rm -f args.txt
 
 fclean: clean
 	make -C $(LIBFT)/ fclean

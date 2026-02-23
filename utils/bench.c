@@ -6,11 +6,10 @@
 /*   By: alemyre <alemyre@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:02:50 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/02/19 16:04:53 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/02/23 16:32:46 by alemyre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
 #include "push_swap.h"
 
 char	*disp_algo(t_ctx **ctx)
