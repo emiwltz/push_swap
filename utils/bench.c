@@ -22,6 +22,8 @@ char	*disp_algo(t_ctx **ctx)
 		return ("Complex (O(n log n))");
 	else if ((*ctx)->algo == ALGO_ADAPTIVE)
 		return ("Adaptive");
+	else if ((*ctx)->algo == ALGO_TINY)
+		return ("Tiny (O(1)) max 10 ops");
 	return ("Unset");
 }
 

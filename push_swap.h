@@ -32,6 +32,7 @@ typedef enum e_algo
 	ALGO_MEDIUM,
 	ALGO_COMPLEX,
 	ALGO_ADAPTIVE,
+  ALGO_TINY,
 }					t_algo;
 
 typedef struct s_ctx

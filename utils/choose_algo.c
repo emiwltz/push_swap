@@ -100,7 +100,10 @@ void	choose_algo(t_stack **a, t_stack **b, t_ctx *ctx)
 		return ;
 	}
 	if (ctx->algo == ALGO_ADAPTIVE && (*a)->size <= 5)
-		run_optimal(a, b, ctx);
+  {
+		ctx->algo = ALGO_TINY;
+    run_optimal(a, b, ctx);
+  }
 	else if (ctx->algo == ALGO_SIMPLE)
 		selection(a, b, ctx);
 	else if (ctx->algo == ALGO_MEDIUM)
