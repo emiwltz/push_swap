@@ -46,6 +46,7 @@ Once compiled, you will need to call the program.
 The arguments are the list you want to sort.  
 It can be one big string or individual arguments.  
 For a cleaner experience, we recommand placing the flags you want to use preceding the list numbers.  
+If no strategy selector is provided, the program uses `--adaptive` by default.
 
 Here is an example :
 
@@ -64,14 +65,29 @@ The flags `--simple`, `--medium` and `--complex` are explained below under Justi
 
 # Resources
 
-- `https://www.geeksforgeeks.org/dsa/selection-sort-algorithm-2/`
+- `https://en.wikipedia.org/wiki/Big_O_notation`
+- `https://www.youtube.com/watch?v=XiuSW_mEn7g&t=131s`
+- `https://www.interviewcake.com/concept/java/bit-shift`
+
+### AI usage
+
+AI tools were used mostly for research and concept understanding, such as:
+- clarifying the subject requirements and constraints,
+- understanding algorithm concepts and how the different strategies work,
+- handling repetitive tasks (drafting test cases, small refactors/cleanup suggestions, and README proofreading).
+
+Any AI-generated suggestion was reviewed, adapted, and only kept if fully understood. The implemented algorithms and final code decisions remain ours.
 
 # Algorithm Explanation and Justification
 
-The function is using 3 differents algorithms:  
-1. `Selective`  
-2. `Chunk`
-3. `Radix`  
+The program embeds 4 strategies:  
+1. `Selective` (simple)  
+2. `Chunk` (medium)
+3. `Radix` (complex)  
+4. `Adaptive` (selects one of the above based on disorder)
+
+Additionally, we implemented a small-input optimization used only by `adaptive` when the input size is `< 5`.  
+This extra strategy is designed to drastically reduce the number of operations on very small stacks without modifying the complexity or behavior of the 3 main algorithms.  
 
 ### 1. Selective sorting
 
@@ -117,10 +133,18 @@ As said above, `adaptive` will select a sorting based purely on the `disorder` p
 The threshold goes as follows: 
 
 - `< 0.2` → selection
-
 - `0.2–0.5` → chunk based
-
 - `≥ 0.5` → radix
+
+Rationale and internal techniques: these thresholds match the required regimes, and the adaptive strategy delegates to the corresponding internal method (Selection / Chunk / Radix).  
+Small-input aparté: when the input size is `< 5`, adaptive may use our dedicated small-stack strategy first to reduce operations on tiny stacks, then returns to the normal adaptive flow. This does not change the target complexity classes of the main strategies.
+
+Complexity argument (Push_swap operation model):  
+- Low disorder uses Selection → `O(n2)` operations.  
+- Medium disorder uses Chunk-based → `O(n√n)` operations.  
+- High disorder uses Radix → `O(n log n)` operations.  
+Space: `O(n)` due to the stacks representation, with `O(1)` additional working variables.
+
 
 # Work Contributions
 
